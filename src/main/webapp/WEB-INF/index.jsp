@@ -15,14 +15,16 @@
     <jsp:body>
 
 
+
         <div>
             <h2>Velkommen til Olsker Cupcakes</h2>
 
             <div style="margin-top: 3em;margin-bottom: 3em;">
                 Log ind for at forsætte
 
+
             </div>
-            <img src="Cupcake-Transparent-Background-PNG.png" alt="FrontPic" />
+            <img src="${pageContext.request.contextPath}/IMG/Cupcake-Transparent-Background-PNG.png" alt="FrontPic" />
 
             <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger">This is what you can do,
