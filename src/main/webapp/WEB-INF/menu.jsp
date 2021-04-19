@@ -21,25 +21,44 @@
         <c:set var="addHomeLink" value="${false}" scope="request"/>
     </jsp:attribute>
     <jsp:body>
+
+        <h1> Velkommen ombord</h1>
+
+
         <form name="menu" action="${pageContext.request.contextPath}/fc/menuCommand" method="POST">
-<h1> Velkommen ombord</h1>
+            <label for="Bottom">Vælg en bund:</label>
 
 
+            <select name="Bottom" id="Bottom">
+                <option value="Chocolate">Chokolade</option>
+                <option value="Vanilla">Vanilje </option>
+                <option value="Nutmeg">Muskatnød</option>
+                <option value="Pistacio">Pistacie</option>
+                <option value="Almond">Mandel</option>
+            </select>
 
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-</div>
+
+            <label for="Toppings">Vælg en topping:</label>
+
+            <select name="Toppings" id="Toppings">
+                <option value="Chocolate">Chokolade</option>
+                <option value="Blueberry">Blåbær </option>
+                <option value="Rasberry">Hinbær</option>
+                <option value="Crispy">Crunch</option>
+                <option value="Strawberry">Jordbær</option>
+
+                <option value="Rum/Raisin">Rom/rosin</option>
+                <option value="Orange">Appelsin </option>
+                <option value="Lemon">Citron</option>
+                <option value="Blue cheese">Blå ost</option>
+                </select>
+
+            <button type="button" class="btn btn-primary">Læg i kurv</button>
+
+
         </form>
 
 
-
-</jsp:body>
+    </jsp:body>
 
 </t:genericpage>
