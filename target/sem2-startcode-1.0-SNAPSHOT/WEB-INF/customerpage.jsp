@@ -14,10 +14,15 @@
         You are now logged in as a Customer of our wonderful site.
         Role: ${sessionScope.role}
 
+<<<<<<< HEAD
         
 
         <p ><a href = "${pageContext.request.contextPath}/fc/tomordrepage" > Se liste af ordrer</a ></p >
 
+=======
+
+     <a href="${pageContext.request.contextPath}/fc/menu"> Klik her </a>
+>>>>>>> 52213c4ee49e273ae51cdd757b4142397d3c5844
 
     </jsp:body>
 

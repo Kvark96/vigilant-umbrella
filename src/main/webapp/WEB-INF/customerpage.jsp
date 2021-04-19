@@ -16,7 +16,10 @@
 
 
 
+
         <p ><a href = "${pageContext.request.contextPath}/fc/tomordrepage" > Se liste af ordrer</a ></p >
+
+     <a href="${pageContext.request.contextPath}/fc/menu"> Klik her </a>
 
 
     </jsp:body>

@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><jsp:invoke fragment="header"/></title>
@@ -16,6 +18,16 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styles.css">
     <meta name="theme-color" content="#7952b3">
+
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto">
+
+    <img src="${pageContext.request.contextPath}/IMG/3afc4b4352e1cd29883a1ccf01e90f33.png"  class="img-fluid mb-xl-auto"   alt="FrontPic"/>
+            </div>
+        </div>
+    </div>
+
 </head>
 <body>
     <!--
@@ -23,11 +35,12 @@
         example: https://getbootstrap.com/docs/5.0/examples/pricing/
     -->
 <header class="d-flex flex-column flex-md-row align-items-center p-3 pb-0 px-md-4 mb-4 bg-white border-bottom shadow-sm">
+
     <div class="h5 my-0 me-md-auto fw-normal">
-        <p>Olsker Cupcakes</p>
+
         <p style="font-size: larger">
             <jsp:invoke fragment="header"/>
-        </p>
+
     </div>
     <nav class="my-2 my-md-0 me-md-3">
         <c:if test="${addHomeLink == null }">
