@@ -7,13 +7,21 @@
 
   Skal bruges til at sammensætte de forskkelige items
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Olsker Cupcakes</title>
-</head>
-<body>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<t:genericpage>
+
+    <jsp:attribute name="header">
+        Vælg dine cupcakes
+    </jsp:attribute>
+
+    <jsp:attribute name="footer">
+        <c:set var="addHomeLink" value="${false}" scope="request"/>
+    </jsp:attribute>
+    <jsp:body>
+        <form name="menu" action="${pageContext.request.contextPath}/fc/menuCommand" method="POST">
 <h1> Velkommen ombord</h1>
 
 
@@ -28,8 +36,10 @@
         <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
 </div>
+        </form>
 
 
 
-</body>
-</html>
+</jsp:body>
+
+</t:genericpage>
