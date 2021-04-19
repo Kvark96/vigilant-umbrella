@@ -33,7 +33,7 @@
         <c:if test="${addHomeLink == null }">
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Hjem</a>
         </c:if>
-        <a class="p-2 text-dark" href="#">Ordre</a>
+
         <a class="p-2 text-dark" href="#">Profil</a>
         <a class="p-2 text-dark" href="#">About</a>
     </nav>
@@ -59,6 +59,10 @@
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
                    href="${pageContext.request.contextPath}/fc/registerpage">Sign up</a>
             </c:if>
+        <c:if test="${sessionScope.user == null }">
+            <a type="button" class="btn btn-sm  btn-outline-secondary"
+               href="${pageContext.request.contextPath}/fc/ordrepage">Ordre</a>
+        </c:if>
     </div>
     </c:if>
 </header>
