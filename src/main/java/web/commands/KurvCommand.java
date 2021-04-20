@@ -2,7 +2,7 @@ package web.commands;
 
 import business.entities.Bottom;
 import business.entities.Cupcake;
-import business.entities.ShoppingCart;
+import business.entities.Indkøbskurv;
 import business.entities.Topping;
 import business.exceptions.UserException;
 
@@ -21,8 +21,8 @@ public class KurvCommand extends CommandUnprotectedPage {
         HttpSession session = request.getSession();
         Cupcake cupcake;
 
+        Indkøbskurv indkøbskurv = new Indkøbskurv();
 
-        ShoppingCart shoppingCart = new ShoppingCart();
 
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");
@@ -33,15 +33,15 @@ public class KurvCommand extends CommandUnprotectedPage {
         Bottom bottom = bottomMap.get(bottomId);
         float totalPrice = (topping.getPrice() + bottom.getPrice()) * quantity;
 
-        if (session.getAttribute("shoppingcart") != null){
-            shoppingCart = (ShoppingCart) session.getAttribute("shoppingcart");
+        if (session.getAttribute("tomordrepage") != null){
+            indkøbskurv = (Indkøbskurv) session.getAttribute("tomordrepage") ;
         }
 
         cupcake = new Cupcake("Cupcake: "+topping.getName() + "/" + bottom.getName(), quantity, totalPrice,bottom,topping);
 
-        shoppingCart.addToProductMap(cupcake);
+        indkøbskurv.addToProductMap(cupcake);
 
-        session.setAttribute("shoppingcart", shoppingCart);
+        session.setAttribute("tomordrepage", indkøbskurv);
 
         return pageToShow;
     }

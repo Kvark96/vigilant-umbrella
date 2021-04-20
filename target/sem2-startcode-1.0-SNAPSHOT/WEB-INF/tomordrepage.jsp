@@ -4,22 +4,64 @@
 
 <t:genericpage>
     <jsp:attribute name="header">
-         Register as new User
+         Indkøbskurv
     </jsp:attribute>
     <jsp:attribute name="footer">
+
     </jsp:attribute>
     <jsp:body>
         <h1>Velkommen til din ordreoversigt ${sessionScope.email}</h1>
 
-
-        <div class="card" style="width: 10rem;">
-            <img src="${pageContext.request.contextPath}/IMG/Kurv.png"  class="img-fluid bg-light m-4">
-            <div class="card-body bg-light p-3">
-
-                <h5 class="card-title">Din indkøbskurv er tom</h5>
-                <p class="card-text">Skynd dig ud og vælge nogle lækre cupcakes!</p>
-                <a href="${pageContext.request.contextPath}/fc/index" class="btn btn-primary">Gå til Menu!</a>
+        <div>
+            <h2>See the items in your shopping cart</h2>
         </div>
+        <form action="${pageContext.request.contextPath}/fc/removefromshoppingcart" method="post">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="item" items="${sessionScope.tomordrepage.productMap}">
+                <tr>
+                    <td>${item.value.name}</td>
+                    <td>${item.value.quantity}</td>
+                    <td>${item.value.totalPrice}</td>
+                    <td>
+                        <button type="submit" class="btn btn-primary" name="delete" value="${item.key}">
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+        <div class="row">
+        <div class="col-sm-4">
+            <h2>${sessionScope.tomordrepage.totalPrice}</h2>
+        </div>
+
+    
+
+            <div class="col-sm-4">
+
+            </div>
+            <c:if test="${sessionScope.role == 'customer' }">
+                <c:set var="link" scope="session" value="/fc/gotopayment"/>
+            </c:if>
+            <c:if test="${empty sessionScope.role}">
+                <c:set var="link" scope="session" value="/fc/loginpage"/>
+            </c:if>
+            <div class="col-sm-4">
+                <a class="btn btn-success" href="${pageContext.request.contextPath}${link}" role="button">Go to
+                    payment</a>
+            </div>
+        </div>
+
     </jsp:body>
 </t:genericpage>
 

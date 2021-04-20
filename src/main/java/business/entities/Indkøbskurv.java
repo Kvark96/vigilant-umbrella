@@ -1,50 +1,46 @@
 package business.entities;
 
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Indkøbskurv {
-    int priceTopping;
-    String nameTopping;
-    int idTopping;
-    int priceBottom;
-    String nameBottom;
-    int idBottom;
-    int antal;
+    HashMap<Integer,Produkt> productMap;
+    float totalPrice;
+    AtomicInteger id;
 
-    public Indkøbskurv(int priceTopping, String nameTopping, int idTopping, int priceBottom, String nameBottom, int idBottom, int antal) {
-        this.priceTopping = priceTopping;
-        this.nameTopping = nameTopping;
-        this.idTopping = idTopping;
-        this.priceBottom = priceBottom;
-        this.nameBottom = nameBottom;
-        this.idBottom = idBottom;
-        this.antal = antal;
+    public Indkøbskurv() {
+        this.id = new AtomicInteger();
+        this.productMap = new HashMap<>();
     }
 
-    public int getPriceTopping() {
-        return priceTopping;
+    private void calcTotalPrice() {
+        totalPrice = 0;
+        for (Produkt tmp : productMap.values()) {
+            totalPrice += tmp.getTotalPrice();
+        }
     }
 
-    public int getIdTopping() {
-        return idTopping;
+    public int getNumberOfItems(){
+        return productMap.size();
     }
 
-    public int getPriceBottom() {
-        return priceBottom;
+    public void addToProductMap(Produkt cupcake) {
+        productMap.put(id.incrementAndGet(),cupcake);
+        calcTotalPrice();
     }
 
-    public String getNameBottom() {
-        return nameBottom;
+    public void removeFromProductMap(int id){
+        productMap.remove(id);
+        calcTotalPrice();
     }
 
-    public int getIdBottom() {
-        return idBottom;
+
+    public HashMap<Integer, Produkt> getProductMap() {
+        return productMap;
     }
 
-    public int getAntal() {
-        return antal;
+    public float getTotalPrice() {
+        return totalPrice;
     }
-
-    public void setAntal(int antal) {
-        this.antal = antal;
-    }
-
 }
+

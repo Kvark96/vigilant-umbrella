@@ -1,5 +1,4 @@
-package web.commands;
-
+package web.commands;/*
 import business.exceptions.UserException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,4 +16,4 @@ public class OrdreCommand extends CommandUnprotectedPage{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         return ;
     }
-}
+}*/
