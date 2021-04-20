@@ -31,27 +31,27 @@
 
             <label for="bottom">Vælg en bund:</label>
             <select name="bottom" id="bottom">
-                <option value="1">Chokolade</option>
-                <option value="2">Vanilje</option>
-                <option value="3">Muskatnød</option>
-                <option value="4">Pistacie</option>
-                <option value="5">Mandel</option>
+                <option value="Chokolade">Chokolade</option>
+                <option value="Vanilje">Vanilje</option>
+                <option value="Muskatnød">Muskatnød</option>
+                <option value="Pistacie">Pistacie</option>
+                <option value="Mandel">Mandel</option>
             </select>
 
 
-            <label for="toppings">Vælg en topping:</label>
+            <label for="topping">Vælg en topping:</label>
 
-            <select name="toppings" id="toppings">
-                <option value="1">Chokolade</option>
-                <option value="2">Blåbær</option>
-                <option value="3">Hinbær</option>
-                <option value="4">Crunch</option>
-                <option value="5">Jordbær</option>
+            <select name="topping" id="topping">
+                <option value="Chokolade">Chokolade</option>
+                <option value="Blåbær">Blåbær</option>
+                <option value="Hinbær">Hinbær</option>
+                <option value="Crunch">Crunch</option>
+                <option value="Jordbær">Jordbær</option>
 
-                <option value="6">Rom/rosin</option>
-                <option value="7">Appelsin</option>
-                <option value="8">Citron</option>
-                <option value="9">Blå ost</option>
+                <option value="Rom/rosin">Rom/rosin</option>
+                <option value="Appelsin">Appelsin</option>
+                <option value="Citron">Citron</option>
+                <option value="Blå ost">Blå ost</option>
             </select>
 
             <label for="count">Vælg antal:</label>
