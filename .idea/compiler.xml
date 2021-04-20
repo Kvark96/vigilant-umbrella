@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="vigilant-umbrella" options="-endorseddirs &quot;C:\Users\TestUser\Desktop\DataMa sem 2\Git\Cupcake\vigilant-umbrella\target/endorsed&quot;" />
+      <module name="vigilant-umbrella" options="-endorseddirs C:\Users\peter\Desktop\Datamatiker\Skoleopgaver\vigilant-umbrella\target/endorsed" />
     </option>
   </component>
 </project>
