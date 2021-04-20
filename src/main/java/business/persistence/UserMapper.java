@@ -4,6 +4,8 @@ import business.exceptions.UserException;
 import business.entities.User;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserMapper
 {
@@ -76,4 +78,25 @@ public class UserMapper
         }
     }
 
+    public ResultSet getUsers(){
+
+        ResultSet rs = null;
+        //ArrayList<User> lst = new ArrayList<>();
+        try (Connection connection = database.connect()) {
+            String SQL = "SELECT * FROM users WHERE role = 'customer'";
+            try(PreparedStatement ps = connection.prepareStatement(SQL)){
+                rs = ps.executeQuery();
+
+                /*while(rs.next()){
+                    lst.add(new User(rs.getString("email"), rs.getString("password"), "customer"));
+                }*/
+
+            } catch (SQLException s){
+                System.out.println("PS Fail");
+            }
+        } catch (SQLException e) {
+            System.out.println("Connection to database could not be established.");
+        }
+        return rs;
+    }
 }
