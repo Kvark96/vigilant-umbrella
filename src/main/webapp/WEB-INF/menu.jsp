@@ -16,7 +16,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-        CupCakes
+        Lyngby Cupcakes
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -77,47 +77,116 @@
                 <option value="20">20</option>
 
             </select>
-
-
+            <br>
+            <br>
             <button type="button" class="btn btn-primary">Læg i kurv</button>
+
         </form>
+        <br>
+        <a href="${pageContext.request.contextPath}/fc/tomordrepage" class="btn btn-primary">Gå til din kurv</a>
+
+
         <div class="container">
 
 
             <table class="table-primary">
-                <thead>
-                <tr>
-                    <th scope="col ">Bunde</th>
-                    <th scope="col">Pris</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Chokolade</td>
-                </tr> <tr>
-                    <td>Vanilje</td>
-                </tr> <tr>
-                    <td>Muskatnød</td>
-                </tr> <tr>
-                    <td>Pistacie</td>
-                </tr> <tr>
-                    <td>Mandel</td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                    <td>5.00</td>
-                </tr> <tr>
-                    <td>5.00</td>
-                </tr> <tr>
-                    <td>5.00</td>
-                </tr> <tr>
-                    <td>6.00</td>
-                </tr> <tr>
-                    <td>7.00</td>
-                </tr>
-                </th>
-                </tbody>
-            </table>
+                <h2>Bunde</h2>
+
+                <table>
+                    <tr>
+                        <th>Smag</th>
+                        <th>Pris</th>
+
+                    </tr>
+                    <tr>
+                        <td>Chokolade</td>
+                        <td>5.00</td>
+
+                    </tr>
+                    <tr>
+                        <td>Vanilje</td>
+                        <td>5.00</td>
+
+                    </tr>
+                    <tr>
+                        <td>Muskatnød</td>
+                        <td>5.00</td>
+
+                    </tr>
+                    <tr>
+                        <td>Pistacie</td>
+                        <td>6.00</td>
+
+                    </tr>
+                    <tr>
+                        <td>Mandel</td>
+                        <td>7.00</td>
+                </table>
+
+
+                <table class="table-primary">
+                    <h2>Toppings</h2>
+
+                    <table>
+                        <tr>
+                            <th>Smag</th>
+                            <th>Pris</th>
+
+                        </tr>
+                        <tr>
+                            <td>Chokolade</td>
+                            <td>5.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Blåbær</td>
+                            <td>5.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Hinbær</td>
+                            <td>5.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Crunch</td>
+                            <td>6.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Jordbær</td>
+                            <td>6.00</td>
+
+                        <tr>
+                            <td>Rom/rosin</td>
+                            <td>7.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Appelsin</td>
+                            <td>8.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Citron</td>
+                            <td>8.00</td>
+
+                        </tr>
+                        <tr>
+                            <td>Blå ost</td>
+                            <td>9.00</td>
+                    </table>
+
+
+
+
+
+
+
+
+
+
+
 
 
         </div>
