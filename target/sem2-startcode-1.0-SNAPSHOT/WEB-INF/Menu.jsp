@@ -27,70 +27,36 @@
         <h1> Velkommen ombord</h1>
 
 
-        <form name="menu" action="${pageContext.request.contextPath}/fc/menuCommand" method="POST">
-            <label for="Bottom">Vælg en bund:</label>
-<<<<<<< HEAD
-=======
+        <form method="post" action="${pageContext.request.contextPath}/fc/menuCommand">
 
-
-            <select name="Bottom" id="Bottom">
-                <option value="Chocolate">Chokolade</option>
-                <option value="Vanilla">Vanilje</option>
-                <option value="Nutmeg">Muskatnød</option>
-                <option value="Pistacio">Pistacie</option>
-                <option value="Almond">Mandel</option>
-            </select>
-
->>>>>>> 52213c4ee49e273ae51cdd757b4142397d3c5844
-
-            <label for="Toppings">Vælg en topping:</label>
-
-<<<<<<< HEAD
-            <select name="Bottom" id="Bottom">
-                <option value="Chocolate">Chokolade</option>
-                <option value="Vanilla">Vanilje </option>
-                <option value="Nutmeg">Muskatnød</option>
-                <option value="Pistacio">Pistacie</option>
-                <option value="Almond">Mandel</option>
+            <label for="bottom">Vælg en bund:</label>
+            <select name="bottom" id="bottom">
+                <option value="1">Chokolade</option>
+                <option value="2">Vanilje</option>
+                <option value="3">Muskatnød</option>
+                <option value="4">Pistacie</option>
+                <option value="5">Mandel</option>
             </select>
 
 
-            <label for="Toppings">Vælg en topping:</label>
+            <label for="toppings">Vælg en topping:</label>
 
-            <select name="Toppings" id="Toppings">
-                <option value="Chocolate">Chokolade</option>
-                <option value="Blueberry">Blåbær </option>
-                <option value="Rasberry">Hinbær</option>
-                <option value="Crispy">Crunch</option>
-                <option value="Strawberry">Jordbær</option>
+            <select name="toppings" id="toppings">
+                <option value="1">Chokolade</option>
+                <option value="2">Blåbær</option>
+                <option value="3">Hinbær</option>
+                <option value="4">Crunch</option>
+                <option value="5">Jordbær</option>
 
-                <option value="Rum/Raisin">Rom/rosin</option>
-                <option value="Orange">Appelsin </option>
-                <option value="Lemon">Citron</option>
-                <option value="Blue cheese">Blå ost</option>
-                </select>
-
-            <button type="button" class="btn btn-primary">Læg i kurv</button>
-
-
-        </form>
-=======
-            <select name="Toppings" id="Toppings">
-                <option value="Chocolate">Chokolade</option>
-                <option value="Blueberry">Blåbær</option>
-                <option value="Rasberry">Hinbær</option>
-                <option value="Crispy">Crunch</option>
-                <option value="Strawberry">Jordbær</option>
-
-                <option value="Rum/Raisin">Rom/rosin</option>
-                <option value="Orange">Appelsin</option>
-                <option value="Lemon">Citron</option>
-                <option value="Blue cheese">Blå ost</option>
+                <option value="6">Rom/rosin</option>
+                <option value="7">Appelsin</option>
+                <option value="8">Citron</option>
+                <option value="9">Blå ost</option>
             </select>
 
-            <label for="Count">Vælg antal:</label>
+            <label for="count">Vælg antal:</label>
 
-            <select name="antal" id="Count">
+            <select name="count" id="count">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">4</option>
@@ -155,7 +121,6 @@
 
 
         </div>
->>>>>>> 52213c4ee49e273ae51cdd757b4142397d3c5844
 
 
     </jsp:body>

@@ -16,7 +16,7 @@ public class menuCommand extends CommandProtectedPage {
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         return pageToShow;
     }
-
+/*
     int bottom = Integer.parseInt(request.getParameter("bottom"));
     int toppings = Integer.parseInt(request.getParameter("toppings"));
     int count = Integer.parseInt(request.getParameter("count"));
@@ -31,6 +31,8 @@ public class menuCommand extends CommandProtectedPage {
     public String getRole() {
         return role;
     }
+
+ */
 
 }
 
