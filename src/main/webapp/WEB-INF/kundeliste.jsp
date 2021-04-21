@@ -22,8 +22,8 @@
             <c:forEach items="${customers}" var="user">
                 <tr>
                     <td><c:out value="${user.email}" /></td>
-                    <td><c:out value="${user.password}" /></td>
                     <td><c:out value="${user.role}" /></td>
+                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
                 </tr>
             </c:forEach>
         </table>

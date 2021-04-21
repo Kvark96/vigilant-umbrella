@@ -12,7 +12,6 @@ import java.util.List;
 public class KundelisteCommand extends CommandProtectedPage{
     public KundelisteCommand(String pageToShow, String role) {
         super(pageToShow, role);
-
     }
 
     @Override
