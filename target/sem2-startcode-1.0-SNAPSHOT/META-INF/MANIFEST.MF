@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-<<<<<<< HEAD
 Built-By: olive
 Build-Jdk: 15.0.2
-=======
-Built-By: TestUser
-Build-Jdk: version 15.0.2
->>>>>>> 75ef6158d37934f80b2edda42b601c7ce345d0ec
 

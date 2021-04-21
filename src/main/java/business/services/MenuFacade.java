@@ -18,8 +18,8 @@ public class MenuFacade {
 
 
 
-    public List<Bottom> getBottoomnEntities() {
-        return menuMapper.getBottoomEntities();
+    public List<Bottom> getBottomEntities() {
+        return menuMapper.getBottomEntities();
     }
 
     public List<Topping> getToppingEntities() {

@@ -14,52 +14,46 @@
 
         <h1> Velkommen ombord</h1>
 
+        <table>
+            <c:forEach items="${bottoms}" var="bottom">
+                <tr>
+                    <td><c:out value="${bottom.email}" /></td>
+                    <td><c:out value="${bottom.role}" /></td>
+                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
+                </tr>
+            </c:forEach>
+        </table>
 
         <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
 
 
-            <label for="bottoms"></label>
+            <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
 
-            <c:forEach items= "${requestScope.bottoms}" var="bottoms">
-              <option value="${bottoms.name}">Bottoms.name</option>
-                 </c:forEach>
-
-            </select>
-
-
-            <label for="toppings"></label>
-            <select name="toppings" id="toppings">
-
-                <c:forEach items= "${requestScope.Toppings}" var="toppings">
-                    <option value="${toppings.name}">toppings.name</option>
+                <c:forEach items="${bottoms}" var="bottom">
+                    <option value="${bottom.name}">${bottom.name}</option>
                 </c:forEach>
 
             </select>
 
 
+            <label for="toppings">TOPPINGS</label>
+            <select name="toppings" id="toppings">
 
+                <c:forEach items="${Toppings}" var="toppings">
+                    <option value="${toppings.name}">${toppings.name}</option>
+                </c:forEach>
+
+            </select>
 
 
             <br>
             <br>
+            <input type="submit" value="Submit"/>
             <button type="button" class="btn btn-primary">Læg i kurv</button>
 
         </form>
         <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <div class="container">
@@ -154,18 +148,7 @@
                     </table>
 
 
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </jsp:body>
- </t:genericpage>
+</t:genericpage>
 

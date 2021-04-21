@@ -18,7 +18,7 @@ public class MenuMapper {
         this.database = database;
     }
 
-    public List<Bottom> getBottoomEntities() {
+    public List<Bottom> getBottomEntities() {
         List<Bottom> bottomEntitiesList = new ArrayList<>();
         try (Connection connection = database.connect()) {
 
@@ -35,7 +35,7 @@ public class MenuMapper {
                     bottomEntitiesList.add(new Bottom(product_id, name, price));
 
                 }
-                return bottomEntitiesList;
+                //return bottomEntitiesList;
             } catch (SQLException e) {
                 throw new SQLException();
             }
@@ -66,7 +66,7 @@ public class MenuMapper {
 
 
                 }
-                return toppingEntitiesList;
+                //return toppingEntitiesList;
             } catch (SQLException e) {
                 throw new SQLException();
             }
