@@ -12,7 +12,8 @@ import java.util.List;
 
 public class MenuMapper {
     private Database database;
-
+}
+/*
     public MenuMapper(Database database) {
         this.database = database;
     }
@@ -71,7 +72,7 @@ public class MenuMapper {
             ex.printStackTrace();
         }
 
-
+*/
 
 
 

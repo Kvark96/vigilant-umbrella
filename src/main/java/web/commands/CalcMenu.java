@@ -16,6 +16,7 @@ public class CalcMenu extends CommandProtectedPage {
         return role;
     }
 
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 

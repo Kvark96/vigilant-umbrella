@@ -22,7 +22,7 @@ public class KurvCommand extends CommandUnprotectedPage {
         Cupcake cupcake;
 
         Indkøbskurv indkøbskurv = new Indkøbskurv();
-
+        // FLoat skal ændret til Dobule
 
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");
@@ -31,7 +31,7 @@ public class KurvCommand extends CommandUnprotectedPage {
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         Topping topping = toppingMap.get(toppingId);
         Bottom bottom = bottomMap.get(bottomId);
-        float totalPrice = (topping.getPrice() + bottom.getPrice()) * quantity;
+        Double totalPrice = (topping.getPrice() + bottom.getPrice()) * quantity;
 
         if (session.getAttribute("tomordrepage") != null){
             indkøbskurv = (Indkøbskurv) session.getAttribute("tomordrepage") ;
@@ -44,5 +44,8 @@ public class KurvCommand extends CommandUnprotectedPage {
         session.setAttribute("tomordrepage", indkøbskurv);
 
         return pageToShow;
+
+
     }
+
 }

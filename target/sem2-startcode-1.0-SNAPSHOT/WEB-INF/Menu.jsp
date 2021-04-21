@@ -26,7 +26,7 @@
 
         <h1> Velkommen ombord</h1>
 
-q
+
         <form method="post" action="${pageContext.request.contextPath}/fc/menuCommand">
 
             <label for="bottom">Vælg en bund:</label>

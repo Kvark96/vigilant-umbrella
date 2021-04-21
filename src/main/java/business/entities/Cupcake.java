@@ -4,7 +4,7 @@ public class Cupcake extends Produkt{
     private Topping topping;
     private Bottom bottom;
 
-    public Cupcake(String name, int quantity, float totalPrice, Bottom bottom, Topping topping) {
+    public Cupcake(String name, int quantity, Double totalPrice, Bottom bottom, Topping topping) {
         super(name, quantity, totalPrice);
         this.bottom = bottom;
         this.topping = topping;

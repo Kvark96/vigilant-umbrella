@@ -17,7 +17,7 @@ public class menuFacade {
         this.menuMapper = menuMapper;
     }
 
-
+/*
     public List<Bottom> getBottoomnEntities(){
         return menuMapper.getBottoomnEntities();
 
@@ -29,4 +29,6 @@ public class menuFacade {
 
 
     }
+
+ */
 }

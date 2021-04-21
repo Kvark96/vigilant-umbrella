@@ -13,7 +13,7 @@
         <h1>Velkommen til din ordreoversigt ${sessionScope.email}</h1>
 
         <div>
-            <h2>See the items in your shopping cart</h2>
+            <h2>Se dine ting her!</h2>
         </div>
         <form action="${pageContext.request.contextPath}/fc/removefromshoppingcart" method="post">
         <table class="table table-striped">
@@ -45,7 +45,7 @@
             <h2>${sessionScope.tomordrepage.totalPrice}</h2>
         </div>
 
-    
+
 
             <div class="col-sm-4">
 

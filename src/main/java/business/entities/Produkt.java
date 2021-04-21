@@ -3,9 +3,9 @@ package business.entities;
 public abstract class Produkt {
     private String name;
     private int quantity;
-    private float totalPrice;
+    private Double totalPrice;
 
-    public Produkt(String name, int quantity, float totalPrice) {
+    public Produkt(String name, int quantity, Double totalPrice) {
         this.name = name;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
@@ -19,7 +19,7 @@ public abstract class Produkt {
         return quantity;
     }
 
-    public float getTotalPrice() {
+    public Double getTotalPrice() {
         return totalPrice;
     }
 }
