@@ -5,7 +5,7 @@ public class Bottom {
     String name;
     Double price;
 
-    public Bottom(int id, String name, Double price) {
+    public Bottom(int product_id, String name, Double price) {
         this.product_id = product_id;
         this.name = name;
       this.price = price;
@@ -15,7 +15,7 @@ public class Bottom {
         return price;
     }
 
-    public int getId() {
+    public int getProduct_id() {
         return product_id;
     }
 

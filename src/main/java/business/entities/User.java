@@ -15,8 +15,6 @@ public class User
     private String email;
     private String password; // Should be hashed and secured
     private String role;
-    private Double balance;
-
 
     public String getEmail()
     {

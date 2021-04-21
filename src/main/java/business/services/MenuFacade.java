@@ -10,12 +10,13 @@ import java.util.List;
 
 public class MenuFacade {
 
-
     private MenuMapper menuMapper;
 
     public MenuFacade(Database database) {
         this.menuMapper = menuMapper;
     }
+
+
 
     public List<Bottom> getBottoomnEntities() {
         return menuMapper.getBottoomEntities();
@@ -23,6 +24,5 @@ public class MenuFacade {
 
     public List<Topping> getToppingEntities() {
             return menuMapper.getToppingEntities();
-
         }
 }
