@@ -1,11 +1,14 @@
 package business.persistence;
 
-import business.entities.BottomEntities;
-import business.entities.ToppingEntities;
+
+
+import business.entities.Bottom;
+import business.entities.Topping;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MenuMapper {
     private Database database;
@@ -14,8 +17,8 @@ public class MenuMapper {
         this.database = database;
     }
 
-    public List<BottomEntities> getBottoomnEntities() {
-        List<BottomEntities> bottomEntitiesList = new ArrayList<>();
+    public List<Bottom> getBottoomnEntities() {
+        List<Bottom> bottomEntitiesList = new ArrayList<>();
         try (Connection connection = database.connect()) {
 
             String sql = "select * from cupcake.bottoms";
@@ -28,7 +31,7 @@ public class MenuMapper {
                     String name = rs.getString("name");
                     Double price = rs.getDouble("price");
 
-                    bottomEntitiesList.add(new BottomEntities(product_id, name, price));
+                    bottomEntitiesList.add(new Bottom(product_id, name, price));
 
 
                 }
@@ -42,8 +45,8 @@ public class MenuMapper {
     }
 
 
-    public List<ToppingEntities> getToppingEntities() {
-        List<ToppingEntities> toppingEntitiesList = new ArrayList<>();
+    public List<Topping> getToppingEntities() {
+        List<Topping> toppingEntitiesList = new ArrayList<>();
         try (Connection connection = database.connect()) {
 
             String sql = "select * from cupcake.Toppings";
@@ -56,7 +59,7 @@ public class MenuMapper {
                     String name = rs.getString("name");
                     Double price = rs.getDouble("price");
 
-                    toppingEntitiesList.add(new ToppingEntities(product_id, name, price));
+                    toppingEntitiesList.add(new Topping(product_id, name, price));
 
 
                 }

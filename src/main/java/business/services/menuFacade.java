@@ -1,6 +1,8 @@
 package business.services;
 
-import business.entities.BottomEntities;
+
+import business.entities.Bottom;
+import business.entities.Topping;
 import business.persistence.Database;
 import business.persistence.MenuMapper;
 
@@ -16,13 +18,15 @@ public class menuFacade {
     }
 
 
-    public List<BottomEntities> getBottoomnEntities(){
+    public List<Bottom> getBottoomnEntities(){
         return menuMapper.getBottoomnEntities();
 
     }
 
-    public List<BottomEntities> getToppingEntities(){
-        return menuMapper.getBottoomnEntities();
+    public List<Topping> getToppingEntities(){
+        return menuMapper.getToppingEntities();
+
+
 
     }
 }

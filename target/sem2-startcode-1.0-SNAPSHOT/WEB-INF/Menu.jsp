@@ -26,7 +26,7 @@
 
         <h1> Velkommen ombord</h1>
 
-
+q
         <form method="post" action="${pageContext.request.contextPath}/fc/menuCommand">
 
             <label for="bottom">Vælg en bund:</label>
@@ -42,7 +42,8 @@
             <label for="topping">Vælg en topping:</label>
 
             <select name="topping" id="topping">
-                <option value="Chokolade">Chokolade</option>
+
+                <option value="Chokolade#-#">Chokolade</option>
                 <option value="Blåbær">Blåbær</option>
                 <option value="Hinbær">Hinbær</option>
                 <option value="Crunch">Crunch</option>
@@ -83,7 +84,7 @@
 
         </form>
         <br>
-        <a href="${pageContext.request.contextPath}/fc/tomordrepage" class="btn btn-primary">Gå til din kurv</a>
+
 
 
         <div class="container">
