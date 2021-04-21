@@ -21,7 +21,7 @@
             <label for="bottoms"></label>
             <select name="bottoms" id="bottoms">
 
-            <c:forEach items= "${requestScope.bottoms}" var="bottoms">
+            <c:forEach items= "${bottoms}" var="bottoms">
               <option value="${bottoms.name}">Bottoms.name</option>
                  </c:forEach>
 
@@ -31,7 +31,7 @@
             <label for="toppings"></label>
             <select name="toppings" id="toppings">
 
-                <c:forEach items= "${requestScope.Toppings}" var="toppings">
+                <c:forEach items= "${Toppings}" var="toppings">
                     <option value="${toppings.name}">toppings.name</option>
                 </c:forEach>
 
