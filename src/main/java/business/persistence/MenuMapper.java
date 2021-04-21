@@ -28,12 +28,11 @@ public class MenuMapper {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
-                    int product_id = rs.getInt("produc_id");
-                    String name = rs.getString("name");
-                    Double price = rs.getDouble("price");
+                   int  product_id = rs.getInt("product_id");
+                  String name = rs.getString("name");
+                   Double price = rs.getDouble("price");
 
                     bottomEntitiesList.add(new Bottom(product_id, name, price));
-
 
                 }
                 return bottomEntitiesList;
@@ -58,9 +57,10 @@ public class MenuMapper {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
-                    int product_id = rs.getInt("product_id");
-                    String name = rs.getString("name");
-                    Double price = rs.getDouble("price");
+                    int  product_id = rs.getInt("product_id");
+                     String name = rs.getString("name");
+
+                    Double  price = rs.getDouble("price");
 
                     toppingEntitiesList.add(new Topping(product_id, name, price));
 
@@ -76,6 +76,8 @@ public class MenuMapper {
         return toppingEntitiesList;
 
     }
+
+
 }
 
 
