@@ -15,11 +15,13 @@ public class menuFacade {
     }
 
     public HashMap<Integer,Topping> getAllToppings() throws UserException {
-        return menuMapper.getAllToppings();
+        //return menuMapper.getAllToppings();
         //TODO add getAllToppings in MenuMapper
+        return new HashMap<>();
     }
     public HashMap<Integer,Bottom> getAllBottoms() throws UserException {
-        return menuMapper.getAllBottoms();
+        //return menuMapper.getAllBottoms();
         //TODO add getAllBottoms in MenuMapper
+        return new HashMap<>();
     }
 }
