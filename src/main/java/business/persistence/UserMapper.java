@@ -79,18 +79,17 @@ public class UserMapper
         }
     }
 
-    public ResultSet getUsers(){
-
-        ResultSet rs = null;
+    public List<User> getUsers(){
+        List<User> lst = new ArrayList<>();
         //ArrayList<User> lst = new ArrayList<>();
         try (Connection connection = database.connect()) {
             String SQL = "SELECT * FROM users WHERE role = 'customer'";
             try(PreparedStatement ps = connection.prepareStatement(SQL)){
-                rs = ps.executeQuery();
+                ResultSet rs = ps.executeQuery();
 
-                /*while(rs.next()){
+                while(rs.next()){
                     lst.add(new User(rs.getString("email"), rs.getString("password"), "customer"));
-                }*/
+                }
 
             } catch (SQLException s){
                 System.out.println("PS Fail");
@@ -98,6 +97,6 @@ public class UserMapper
         } catch (SQLException e) {
             System.out.println("Connection to database could not be established.");
         }
-        return rs;
+        return lst;
     }
 }

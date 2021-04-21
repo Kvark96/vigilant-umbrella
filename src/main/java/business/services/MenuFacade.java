@@ -17,17 +17,12 @@ public class MenuFacade {
         this.menuMapper = menuMapper;
     }
 
-
-    public List<Bottom> getBottoomnEntities(){
+    public List<Bottom> getBottoomnEntities() {
         return menuMapper.getBottoomEntities();
-
     }
 
-    public List<Topping> getToppingEntities(){
-        return menuMapper.getToppingEntities();
+    public List<Topping> getToppingEntities() {
+            return menuMapper.getToppingEntities();
 
-
-
-    }
-
+        }
 }
