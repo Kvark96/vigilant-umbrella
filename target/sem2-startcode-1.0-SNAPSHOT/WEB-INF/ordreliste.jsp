@@ -10,14 +10,13 @@
     </jsp:attribute>
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
-        Her er en liste af kunder:
+        Her er en liste af ordrer:
 
         <table>
-            <c:forEach items="${customers}" var="user">
+            <c:forEach items="${orders}" var="order">
                 <tr>
-                    <td><c:out value="${user.email}" /></td>
-                    <td><c:out value="${user.role}" /></td>
-                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
+                    <td><c:out value="${order.usermail}" /></td>
+                    <td><c:out value="${order.orderId}"/></td>
                 </tr>
             </c:forEach>
         </table>
