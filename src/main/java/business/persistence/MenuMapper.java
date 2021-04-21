@@ -12,13 +12,13 @@ import java.util.List;
 
 public class MenuMapper {
     private Database database;
-}
-/*
+
+
     public MenuMapper(Database database) {
         this.database = database;
     }
 
-    public List<Bottom> getBottoomnEntities() {
+    public List<Bottom> getBottoomEntities() {
         List<Bottom> bottomEntitiesList = new ArrayList<>();
         try (Connection connection = database.connect()) {
 
@@ -42,7 +42,9 @@ public class MenuMapper {
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
+
         }
+        return bottomEntitiesList;
     }
 
 
@@ -56,7 +58,7 @@ public class MenuMapper {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
-                    int product_id = rs.getInt("produc_id");
+                    int product_id = rs.getInt("product_id");
                     String name = rs.getString("name");
                     Double price = rs.getDouble("price");
 
@@ -71,9 +73,10 @@ public class MenuMapper {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        return toppingEntitiesList;
 
-*/
-
+    }
+}
 
 
 

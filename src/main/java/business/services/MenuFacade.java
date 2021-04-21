@@ -8,18 +8,18 @@ import business.persistence.MenuMapper;
 
 import java.util.List;
 
-public class menuFacade {
+public class MenuFacade {
 
 
     private MenuMapper menuMapper;
 
-    public menuFacade(Database database) {
+    public MenuFacade(Database database) {
         this.menuMapper = menuMapper;
     }
 
-/*
+
     public List<Bottom> getBottoomnEntities(){
-        return menuMapper.getBottoomnEntities();
+        return menuMapper.getBottoomEntities();
 
     }
 
@@ -30,5 +30,4 @@ public class menuFacade {
 
     }
 
- */
 }
