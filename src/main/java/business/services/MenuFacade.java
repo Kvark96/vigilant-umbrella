@@ -24,6 +24,5 @@ public class MenuFacade {
 
     public List<Topping> getToppingEntities() {
             return menuMapper.getToppingEntities();
-
         }
 }

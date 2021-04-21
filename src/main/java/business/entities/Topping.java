@@ -5,7 +5,7 @@ public class Topping {
     String name;
     Double price;
 
-    public Topping(int id, String name, Double price) {
+    public Topping(int product_id, String name, Double price) {
         this.product_id = product_id;
         this.name = name;
         this.price = price;
@@ -15,8 +15,7 @@ public class Topping {
         return price;
     }
 
-    public int getId() {
-        return product_id;
+    public int getProduct_id() {return product_id;
     }
 
     public String getName() {

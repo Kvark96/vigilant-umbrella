@@ -18,13 +18,25 @@
         <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
 
 
-            <label for="Bottoms">Bottoms:</label>
+            <label for="bottoms"></label>
+            <select name="bottoms" id="bottoms">
 
-        <c:forEach items= "${requestScope.bottoms}" var="Bottoms">
-             <select name="Bottoms" id="Bottoms">
-              <option value="${Bottoms.name}">Bottom.name</option>
-             </select>
+            <c:forEach items= "${requestScope.bottoms}" var="bottoms">
+              <option value="${bottoms.name}">Bottoms.name</option>
                  </c:forEach>
+
+            </select>
+
+
+            <label for="toppings"></label>
+            <select name="toppings" id="toppings">
+
+                <c:forEach items= "${requestScope.Toppings}" var="toppings">
+                    <option value="${toppings.name}">toppings.name</option>
+                </c:forEach>
+
+            </select>
+
 
 
 
