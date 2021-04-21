@@ -17,27 +17,16 @@
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
         Her er en liste af kunder:
-        <tr bgcolor="848484">
-            <td>id</td>
-            <td>email</td>
-            <td>balance</td>
-        </tr>
-        <%
-            UserMapper um = new UserMapper(web.FrontController.database);
-            ResultSet rs = um.getUsers();
-            while(rs.next()){
-                try{
-        %>
-        <tr bgcolor="#696969">
-            <td><%=rs.getString("id")%></td>
-            <td><%=rs.getString("email")%></td>
-            <td><%=rs.getString("balance")%></td>
-        </tr>
-        <% } catch (SQLException e){
-                e.printStackTrace();
-            }
-        }
-        %>
+
+        <table>
+            <c:forEach items="${customers}" var="user">
+                <tr>
+                    <td><c:out value="${user.email}" /></td>
+                    <td><c:out value="${user.role}" /></td>
+                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
+                </tr>
+            </c:forEach>
+        </table>
 
         <p ><a href = "${pageContext.request.contextPath}/fc/employeepage" > Tilbage til employee side</a ></p >
     </jsp:body>
