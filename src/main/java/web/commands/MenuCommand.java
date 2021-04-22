@@ -7,7 +7,7 @@ import web.FrontController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import java.util.*;
 
 public class MenuCommand extends CommandProtectedPage {
 
@@ -17,12 +17,19 @@ public class MenuCommand extends CommandProtectedPage {
     }
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response){
+        Bottom bottom = new Bottom()
 
-        String Bottom = "";
-        String Toppings = "";
+        int Bottom_id = 0;
+        int Toppings_id = 0;
 
-        request.getParameter("Bottom");
-        request.getParameter("Topping");
+        Bottom_id = Integer.parseInt(request.getParameter("bottoms"));
+        Toppings_id = Integer.parseInt(request.getParameter("Toppings"));
+
+
+
+        List<String> orderline = new ArrayList<>();
+
+        orderline.add()
 
 
         request.setAttribute("Bottom", Bottom);
