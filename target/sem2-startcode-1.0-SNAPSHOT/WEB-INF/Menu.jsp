@@ -14,30 +14,11 @@
 
         <h1> Velkommen ombord</h1>
 
-        <form method="Get" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
+        <form method="Get" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
 
 
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
-<<<<<<< HEAD
-
-
-                <c:forEach items="${bottoms}" var="bottom">
-                    <option value="${bottom.name}">${bottom.name}</option>
-                </c:forEach>
-
-
-            </select>
-
-
-            <label for="toppings">TOPPINGS</label>
-            <select name="toppings" id="toppings">
-
-
-                <c:forEach items="${Toppings}" var="toppings">
-                    <option value="${toppings.name}">${toppings.name}</option>
-
-=======
                 <c:forEach var="bottom" items="${applicationScope.bottomList}">
                     <option value="${Bottom.name}">${bottom.name}</option>
                 </c:forEach>
@@ -47,7 +28,6 @@
             <select name="Toppings" id="Toppings">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
                     <option value="${Toppings.name}">${Toppings.name}</option>
->>>>>>> 303986e68ff978e66cf8d59efe6c314bb9045494
                 </c:forEach>
             </select>
 

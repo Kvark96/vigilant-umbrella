@@ -14,7 +14,7 @@
 
         <h1> Velkommen ombord</h1>
 
-        <form method="Get" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
+        <form method="Get" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
 
 
             <label for="bottoms">BOTTOMS</label>
