@@ -21,4 +21,13 @@ public class Topping {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Topping{" +
+                "product_id=" + product_id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

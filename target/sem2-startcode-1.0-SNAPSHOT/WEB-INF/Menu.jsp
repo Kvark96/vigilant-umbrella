@@ -19,6 +19,7 @@
 
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
+<<<<<<< HEAD
 
 
                 <c:forEach items="${bottoms}" var="bottom">
@@ -36,15 +37,25 @@
                 <c:forEach items="${Toppings}" var="toppings">
                     <option value="${toppings.name}">${toppings.name}</option>
 
+=======
+                <c:forEach var="bottom" items="${applicationScope.bottomList}">
+                    <option value="${Bottom.name}">${bottom.name}</option>
                 </c:forEach>
+            </select>
 
+            <label for="Toppings">Topping</label>
+            <select name="Toppings" id="Toppings">
+                <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
+                    <option value="${Toppings.name}">${Toppings.name}</option>
+>>>>>>> 303986e68ff978e66cf8d59efe6c314bb9045494
+                </c:forEach>
             </select>
 
 
             <br>
             <br>
-            <input type="submit" value="Submit"/>
-            <button type="button" class="btn btn-primary">Læg i kurv</button>
+            <input type="submit" class="btn btn-primary" value="Submit"/>
+
 
         </form>
         <br>
