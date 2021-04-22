@@ -22,4 +22,13 @@ public class Bottom {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Bottom{" +
+                "product_id=" + product_id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

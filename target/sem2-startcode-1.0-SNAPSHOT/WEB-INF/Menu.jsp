@@ -14,43 +14,28 @@
 
         <h1> Velkommen ombord</h1>
 
-        <table>
-            <c:forEach items="${bottoms}" var="bottom">
-                <tr>
-                    <td><c:out value="${bottom.email}" /></td>
-                    <td><c:out value="${bottom.role}" /></td>
-                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
-                </tr>
-            </c:forEach>
-        </table>
-
         <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
 
 
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
-
-                <c:forEach items="${bottoms}" var="bottom">
-                    <option value="${bottom.name}">${bottom.name}</option>
+                <c:forEach var="bottom" items="${applicationScope.bottomList}">
+                    <option value="${Bottom.name}">${bottom.name}</option>
                 </c:forEach>
-
             </select>
 
-
-            <label for="toppings">TOPPINGS</label>
-            <select name="toppings" id="toppings">
-
-                <c:forEach items="${Toppings}" var="toppings">
-                    <option value="${toppings.name}">${toppings.name}</option>
+            <label for="Toppings">Topping</label>
+            <select name="Toppings" id="Toppings">
+                <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
+                    <option value="${Toppings.name}">${Toppings.name}</option>
                 </c:forEach>
-
             </select>
 
 
             <br>
             <br>
-            <input type="submit" value="Submit"/>
-            <button type="button" class="btn btn-primary">Læg i kurv</button>
+            <input type="submit" class="btn btn-primary" value="Submit"/>
+
 
         </form>
         <br>

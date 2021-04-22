@@ -2,6 +2,7 @@ package web;
 
 import business.exceptions.UserException;
 import business.persistence.Database;
+import business.persistence.MenuMapper;
 import web.commands.*;
 
 import java.io.IOException;
@@ -43,7 +44,14 @@ public class FrontController extends HttpServlet
 
         // Initialize whatever global datastructures needed here:
 
-    }
+        MenuMapper menuMapper = new MenuMapper(database);
+        try {
+            getServletContext().setAttribute("bottomList",menuMapper.getBottomEntities());
+            getServletContext().setAttribute("toppinglist",menuMapper.getToppingEntities());
+        } catch (Exception e ){
+            Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);;
+        }
+        }
 
     protected void processRequest(
             HttpServletRequest request,

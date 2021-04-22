@@ -19,7 +19,7 @@ public class MenuMapper {
     }
 
     public List<Bottom> getBottomEntities() {
-        List<Bottom> bottomEntitiesList = new ArrayList<>();
+        List<Bottom> bottomProductList = new ArrayList<>();
         try (Connection connection = database.connect()) {
 
             String sql = "select * from cupcake.bottoms";
@@ -28,14 +28,16 @@ public class MenuMapper {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
+
                    int  product_id = rs.getInt("product_id");
                   String name = rs.getString("name");
                    Double price = rs.getDouble("price");
 
-                    bottomEntitiesList.add(new Bottom(product_id, name, price));
+                    bottomProductList.add(new Bottom(product_id, name, price));
 
                 }
-                //return bottomEntitiesList;
+                System.out.println(bottomProductList.toString());
+                return bottomProductList;
             } catch (SQLException e) {
                 throw new SQLException();
             }
@@ -43,7 +45,7 @@ public class MenuMapper {
             ex.printStackTrace();
 
         }
-        return bottomEntitiesList;
+        return bottomProductList;
     }
 
 
@@ -66,7 +68,8 @@ public class MenuMapper {
 
 
                 }
-                //return toppingEntitiesList;
+                System.out.println(toppingEntitiesList);
+                return toppingEntitiesList;
             } catch (SQLException e) {
                 throw new SQLException();
             }
