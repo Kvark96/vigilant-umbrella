@@ -3,12 +3,12 @@ package business.entities;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Indkøbskurv {
+public class Indkoebskurv {
     HashMap<Integer,Produkt> productMap;
     float totalPrice;
     AtomicInteger id;
 
-    public Indkøbskurv() {
+    public Indkoebskurv() {
         this.id = new AtomicInteger();
         this.productMap = new HashMap<>();
     }

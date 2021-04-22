@@ -17,7 +17,12 @@
                 <tr>
                     <td><c:out value="${user.email}" /></td>
                     <td><c:out value="${user.role}" /></td>
-                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
+                    <td>
+                        <form name="kundeordre" action="${pageContext.request.contextPath}/fc/kundeordre" method="post">
+                            <input type="hidden" name="email" value="${user.email}"/>
+                            <button class="btn btn-sm  btn-outline-secondary" type="submit" value="seOrdrer">Se Ordrer</button>
+                        </form>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
