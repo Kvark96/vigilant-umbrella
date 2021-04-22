@@ -14,25 +14,17 @@
 
         <h1> Velkommen ombord</h1>
 
-        <table>
-            <c:forEach items="${bottoms}" var="bottom">
-                <tr>
-                    <td><c:out value="${bottom.email}" /></td>
-                    <td><c:out value="${bottom.role}" /></td>
-                    <td> <a href = "${pageContext.request.contextPath}"> Se ordrer </a> </td>
-                </tr>
-            </c:forEach>
-        </table>
-
         <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
 
 
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
 
+
                 <c:forEach items="${bottoms}" var="bottom">
                     <option value="${bottom.name}">${bottom.name}</option>
                 </c:forEach>
+
 
             </select>
 
@@ -40,8 +32,10 @@
             <label for="toppings">TOPPINGS</label>
             <select name="toppings" id="toppings">
 
+
                 <c:forEach items="${Toppings}" var="toppings">
                     <option value="${toppings.name}">${toppings.name}</option>
+
                 </c:forEach>
 
             </select>
