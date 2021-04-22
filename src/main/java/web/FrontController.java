@@ -29,7 +29,7 @@ public class FrontController extends HttpServlet
 
     public void init() throws ServletException
     {
-        // Initialize database connection
+
         if (database == null)
         {
             try
@@ -42,7 +42,7 @@ public class FrontController extends HttpServlet
             }
         }
 
-        // Initialize whatever global datastructures needed here:
+
 
         MenuMapper menuMapper = new MenuMapper(database);
         try {
