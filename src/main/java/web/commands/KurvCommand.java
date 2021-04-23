@@ -9,7 +9,9 @@ import business.exceptions.UserException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class KurvCommand extends CommandUnprotectedPage {
     public KurvCommand(String pageToShow) {
@@ -22,14 +24,28 @@ public class KurvCommand extends CommandUnprotectedPage {
         Cupcake cupcake;
 
 
-        Indkøbskurv indkøbskurv = new Indkøbskurv();
-
         String Bottom_name = "";
         String Toppings_name = "";
         int count = 0;
 
-        Indkoebskurv indkoebskurv = new Indkoebskurv();
+        Indkoebskurv Indkoebskurv = new Indkoebskurv();
         // FLoat skal ændret til Dobule
+
+
+
+        request.setAttribute("Bottom", Bottom_name);
+        request.setAttribute("Topping", Toppings_name);
+
+        request.setAttribute("Count", count);
+
+        List<Cupcake> orderline = new ArrayList<>();
+
+
+
+
+        Bottom_name = request.getParameter("bottoms");
+        Toppings_name = request.getParameter("Toppings");
+        count = Integer.parseInt(request.getParameter("Count"));
 
 
 
@@ -39,12 +55,11 @@ public class KurvCommand extends CommandUnprotectedPage {
 
 
 
+        Indkoebskurv indkoebskurv = new Indkoebskurv();
 
 
 
 
-
-/*
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");
         int toppingId = Integer.parseInt(request.getParameter("toppingid"));
@@ -65,7 +80,7 @@ public class KurvCommand extends CommandUnprotectedPage {
         session.setAttribute("tomordrepage", indkoebskurv);
 
 
- */
+
 
         return pageToShow;
 
