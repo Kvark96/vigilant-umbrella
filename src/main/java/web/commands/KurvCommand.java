@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class KurvCommand extends CommandUnprotectedPage {
-    public KurvCommand(String pageToShow) {
-        super(pageToShow);
+public class KurvCommand extends CommandProtectedPage{
+    public KurvCommand(String pageToShow, String role) {
+        super(pageToShow, role);
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
+    public String execute(HttpServletRequest request, HttpServletResponse response){
         HttpSession session = request.getSession();
         Cupcake cupcake;
 
@@ -83,8 +83,6 @@ public class KurvCommand extends CommandUnprotectedPage {
 
 
         return pageToShow;
-
-
     }
 
 }
