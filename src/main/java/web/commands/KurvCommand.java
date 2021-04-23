@@ -2,7 +2,7 @@ package web.commands;
 
 import business.entities.Bottom;
 import business.entities.Cupcake;
-import business.entities.Indkøbskurv;
+import business.entities.Indkoebskurv;
 import business.entities.Topping;
 import business.exceptions.UserException;
 
@@ -21,11 +21,15 @@ public class KurvCommand extends CommandUnprotectedPage {
         HttpSession session = request.getSession();
         Cupcake cupcake;
 
+
         Indkøbskurv indkøbskurv = new Indkøbskurv();
 
         String Bottom_name = "";
         String Toppings_name = "";
         int count = 0;
+
+        Indkoebskurv indkoebskurv = new Indkoebskurv();
+        // FLoat skal ændret til Dobule
 
 
 
@@ -51,14 +55,14 @@ public class KurvCommand extends CommandUnprotectedPage {
         Double totalPrice = (topping.getPrice() + bottom.getPrice()) * quantity;
 
         if (session.getAttribute("tomordrepage") != null){
-            indkøbskurv = (Indkøbskurv) session.getAttribute("tomordrepage") ;
+            indkoebskurv = (Indkoebskurv) session.getAttribute("tomordrepage") ;
         }
 
         cupcake = new Cupcake("Cupcake: "+topping.getName() + "/" + bottom.getName(), quantity, totalPrice,bottom,topping);
 
-        indkøbskurv.addToProductMap(cupcake);
+        indkoebskurv.addToProductMap(cupcake);
 
-        session.setAttribute("tomordrepage", indkøbskurv);
+        session.setAttribute("tomordrepage", indkoebskurv);
 
 
  */
