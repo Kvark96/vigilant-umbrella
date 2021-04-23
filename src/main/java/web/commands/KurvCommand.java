@@ -22,7 +22,7 @@ public class KurvCommand extends CommandUnprotectedPage {
         Cupcake cupcake;
 
         Indkøbskurv indkøbskurv = new Indkøbskurv();
-        // FLoat skal ændret til Dobule
+
 
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");

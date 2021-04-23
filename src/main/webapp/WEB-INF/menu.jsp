@@ -14,25 +14,27 @@
 
         <h1> Velkommen ombord</h1>
 
-        <form method="Get" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
+        <form method="post ls
+" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
 
 
-            <label for="bottoms">BOTTOMS</label>
-            <select name="bottoms" id="bottoms">
-                <c:forEach var="bottom" items="${applicationScope.bottomList}">
-                    <option value="${Bottom.id}">${bottom.name}</option>
+            <label for="Bottom">BOTTOMS</label>
+            <select name="Bottom" id="Bottom">
+                <c:forEach var="Bottom" items="${applicationScope.bottomList}">
+                    <option value="${Bottom.name}">${Bottom.name}</option>
                 </c:forEach>
             </select>
 
             <label for="Toppings">Topping</label>
             <select name="Toppings" id="Toppings">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
-                    <option value="${Toppings.id}">${Toppings.name}</option>
+                    <option value="${Toppings.name}">${Toppings.name}</option>
                 </c:forEach>
             </select>
 
 
-            <select id="Count">
+            <label for="Count">Count</label>
+            <select name="Count" id="Count">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
