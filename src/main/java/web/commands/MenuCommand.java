@@ -1,5 +1,5 @@
 package web.commands;
-/*
+
 import business.entities.Bottom;
 import business.entities.Topping;
 import business.persistence.MenuMapper;
@@ -16,8 +16,29 @@ public class MenuCommand extends CommandProtectedPage {
         super(pageToShow, role);
     }
 
+
+
+
+
+
+
+
+
+
     @Override
         Bottom bottom = new Bottom();
+
+    public String execute(HttpServletRequest request, HttpServletResponse response){
+        //Bottom bottom = new Bottom();
+
+
+
+
+
+
+
+
+
         int Bottom_id = 0;
         int Toppings_id = 0;
 
@@ -25,6 +46,15 @@ public class MenuCommand extends CommandProtectedPage {
         Toppings_id = Integer.parseInt(request.getParameter("Toppings"));
 
         List<String> orderline = new ArrayList<>();
+
+
+
+
+
+
+
+
+
         orderline.add();
 
 
@@ -47,7 +77,18 @@ public class MenuCommand extends CommandProtectedPage {
         request.setAttribute("Count", count);
 
 
+        //orderline.add();
+
+
+//        request.setAttribute("Bottom", Bottom);
+//        request.setAttribute("Topping", Bottom);
+
+
+
+
 return pageToShow;
     }
 
-*/
+
+}
+

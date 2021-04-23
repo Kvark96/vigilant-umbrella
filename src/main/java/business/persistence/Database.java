@@ -18,7 +18,7 @@ public class Database
         {
             // Prod: hent variabler fra setenv.sh i Tomcats bin folder
             USER = System.getenv("java");
-            PASSWORD = System.getenv("java123");
+            PASSWORD = System.getenv("java");
             URL = System.getenv("JDBC_CONNECTION_STRING");
         } else
         {

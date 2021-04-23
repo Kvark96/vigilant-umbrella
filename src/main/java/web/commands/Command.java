@@ -28,14 +28,26 @@ public abstract class Command
         commands.put("registercommand", new RegisterCommand(""));
         commands.put("customerpage", new CommandProtectedPage("customerpage", "customer"));
         commands.put("employeepage", new CommandProtectedPage("employeepage", "employee"));
-
         commands.put("kundeliste", new KundelisteCommand("kundeliste", "employee"));
         commands.put("ordreliste", new OrdreListeCommand("ordreliste", "employee"));
         commands.put("kundeordre", new KundeOrdreCommand("kundeordre", "employee"));
-
         commands.put("tomordrepage", new KurvCommand("tomordrepage","customer"));
+        commands.put("menu", new CommandProtectedPage("menu","customer"));
+        commands.put("gotopayment", new PaymentCommand("paymentpage","customer"));
+
+
+
+
+
 
         commands.put("menu", new CommandProtectedPage("menu","customer"));
+
+
+
+
+
+
+
 
 
     }
