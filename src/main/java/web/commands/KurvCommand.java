@@ -22,7 +22,7 @@ public class KurvCommand extends CommandProtectedPage{
         Cupcake cupcake;
 
 
-        Indkøbskurv indkøbskurv = new Indkøbskurv();
+        Indkoebskurv indkøbskurv = new Indkoebskurv();
 
         String Bottom_name = "";
         String Toppings_name = "";

@@ -17,45 +17,27 @@ public class MenuCommand extends CommandProtectedPage {
     }
 
     @Override
-
-
-
-
-
- */
- */
- */
- */
         Bottom bottom = new Bottom();
-
         int Bottom_id = 0;
         int Toppings_id = 0;
 
         Bottom_id = Integer.parseInt(request.getParameter("bottoms"));
         Toppings_id = Integer.parseInt(request.getParameter("Toppings"));
 
-
-
         List<String> orderline = new ArrayList<>();
-
         orderline.add();
 
 
         request.setAttribute("Bottom", Bottom);
         request.setAttribute("Topping", Bottom);
 
-
-
         String Bottom_name = "";
         String Toppings_name = "";
         int count = 0;
 
-/*
         String Bottom_name = "";
         String Toppings_name = "";
         int count = 0;
-
- */
 
         Bottom_name = request.getParameter("bottoms");
         Toppings_name = request.getParameter("Toppings");
@@ -68,5 +50,4 @@ public class MenuCommand extends CommandProtectedPage {
 return pageToShow;
     }
 
-}
 */
