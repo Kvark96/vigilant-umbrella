@@ -2,6 +2,7 @@ package web;
 
 import business.exceptions.UserException;
 import business.persistence.Database;
+import business.persistence.MenuMapper;
 import web.commands.*;
 
 import java.io.IOException;
@@ -19,8 +20,11 @@ public class FrontController extends HttpServlet
 {
 
 
-    private final static String USER = "java";
-    private final static String PASSWORD = "java";
+
+
+
+    private final static String USER = "root";
+    private final static String PASSWORD = "Cph73128";
 
     private final static String URL = "jdbc:mysql://localhost:3306/cupcake?serverTimezone=CET";
 
@@ -28,7 +32,7 @@ public class FrontController extends HttpServlet
 
     public void init() throws ServletException
     {
-        // Initialize database connection
+
         if (database == null)
         {
             try
@@ -41,9 +45,16 @@ public class FrontController extends HttpServlet
             }
         }
 
-        // Initialize whatever global datastructures needed here:
 
-    }
+
+        MenuMapper menuMapper = new MenuMapper(database);
+        try {
+            getServletContext().setAttribute("bottomList",menuMapper.getBottomEntities());
+            getServletContext().setAttribute("toppinglist",menuMapper.getToppingEntities());
+        } catch (Exception e ){
+            Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);;
+        }
+        }
 
     protected void processRequest(
             HttpServletRequest request,

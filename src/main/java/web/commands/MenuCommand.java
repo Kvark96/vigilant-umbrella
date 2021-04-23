@@ -7,7 +7,7 @@ import web.FrontController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import java.util.*;
 
 public class MenuCommand extends CommandProtectedPage {
 
@@ -15,14 +15,21 @@ public class MenuCommand extends CommandProtectedPage {
     public MenuCommand(String pageToShow, String role) {
         super(pageToShow, role);
     }
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response){
 
-        MenuMapper MM = new MenuMapper(FrontController.database);
-        List<Bottom> bottoms = MM.getBottomEntities();
-        List<Topping> toppings = MM.getToppingEntities();
-        request.setAttribute("bottoms", bottoms);
-        request.setAttribute("Toppings",toppings);
+        String Bottom_name = "";
+        String Toppings_name = "";
+        int count = 0;
+
+        Bottom_name = request.getParameter("bottoms");
+        Toppings_name = request.getParameter("Toppings");
+        count = Integer.parseInt(request.getParameter("Count"));
+        request.setAttribute("Bottom", Bottom_name);
+        request.setAttribute("Topping", Toppings_name);
+        request.setAttribute("Count", count);
+
 
 return pageToShow;
     }

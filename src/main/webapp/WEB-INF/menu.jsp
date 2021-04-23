@@ -14,135 +14,75 @@
 
         <h1> Velkommen ombord</h1>
 
-        <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
+        <form method="post ls
+" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
 
 
-            <label for="bottoms">BOTTOMS</label>
-            <select name="bottoms" id="bottoms">
-
-
-                <c:forEach items="${bottoms}" var="bottom">
-                    <option value="${bottom.name}">${bottom.name}</option>
+            <label for="Bottom">BOTTOMS</label>
+            <select name="Bottom" id="Bottom">
+                <c:forEach var="Bottom" items="${applicationScope.bottomList}">
+                    <option value="${Bottom.name}">${Bottom.name}</option>
                 </c:forEach>
+            </select>
 
-
+            <label for="Toppings">Topping</label>
+            <select name="Toppings" id="Toppings">
+                <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
+                    <option value="${Toppings.name}">${Toppings.name}</option>
+                </c:forEach>
             </select>
 
 
-            <label for="toppings">TOPPINGS</label>
-            <select name="toppings" id="toppings">
-
-
-                <c:forEach items="${Toppings}" var="toppings">
-                    <option value="${toppings.name}">${toppings.name}</option>
-
-                </c:forEach>
-
+            <label for="Count">Count</label>
+            <select name="Count" id="Count">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
             </select>
-
-
             <br>
             <br>
-            <input type="submit" value="Submit"/>
-            <button type="button" class="btn btn-primary">Læg i kurv</button>
-
+            <input type="submit" class="btn btn-primary" value="Submit"/>
         </form>
         <br>
 
+        <H1> Bunde</H1>
 
-        <div class="container">
+        <table>
+        <c:forEach var="Bottom" items="${applicationScope.bottomList}">
+            <tr>
+                <td><c:out value="${Bottom.name}"/></td>
+                <td><c:out value="${Bottom.price}" /></td>
+                </tr>
+        </c:forEach>
+        </table>
 
+        <H2> Toppe</H2>
+        <table>
+            <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
+                <tr>
+                    <td><c:out value="${Toppings.name}"/></td>
+                    <td><c:out value="${Toppings.price}" /></td>
+                </tr>
+            </c:forEach>
+        </table>
 
-            <table class="table-primary">
-                <h2>Bunde</h2>
-
-                <table>
-                    <tr>
-                        <th>Smag</th>
-                        <th>Pris</th>
-
-                    </tr>
-                    <tr>
-                        <td>Chokolade</td>
-                        <td>5.00</td>
-
-                    </tr>
-                    <tr>
-                        <td>Vanilje</td>
-                        <td>5.00</td>
-
-                    </tr>
-                    <tr>
-                        <td>Muskatnød</td>
-                        <td>5.00</td>
-
-                    </tr>
-                    <tr>
-                        <td>Pistacie</td>
-                        <td>6.00</td>
-
-                    </tr>
-                    <tr>
-                        <td>Mandel</td>
-                        <td>7.00</td>
-                </table>
-
-
-                <table class="table-primary">
-                    <h2>Toppings</h2>
-
-                    <table>
-                        <tr>
-                            <th>Smag</th>
-                            <th>Pris</th>
-
-                        </tr>
-                        <tr>
-                            <td>Chokolade</td>
-                            <td>5.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Blåbær</td>
-                            <td>5.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Hinbær</td>
-                            <td>5.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Crunch</td>
-                            <td>6.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Jordbær</td>
-                            <td>6.00</td>
-
-                        <tr>
-                            <td>Rom/rosin</td>
-                            <td>7.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Appelsin</td>
-                            <td>8.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Citron</td>
-                            <td>8.00</td>
-
-                        </tr>
-                        <tr>
-                            <td>Blå ost</td>
-                            <td>9.00</td>
-                    </table>
-
-
-        </div>
     </jsp:body>
 </t:genericpage>
 
