@@ -1,14 +1,14 @@
 package business.entities;
 
-public abstract class Produkt {
+public interface  Product {
     private String name;
     private int quantity;
     private Double totalPrice;
 
-    public Produkt(String name, int quantity, Double totalPrice) {
+    public Product(String name, int quantity) {
         this.name = name;
         this.quantity = quantity;
-        this.totalPrice = totalPrice;
+
     }
 
     public String getName() {
@@ -19,7 +19,4 @@ public abstract class Produkt {
         return quantity;
     }
 
-    public Double getTotalPrice() {
-        return totalPrice;
-    }
 }

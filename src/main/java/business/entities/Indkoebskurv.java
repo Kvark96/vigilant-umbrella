@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Indkoebskurv {
-    HashMap<Integer,Produkt> productMap;
+    HashMap<Integer, Product> productMap;
     float totalPrice;
     AtomicInteger id;
 
@@ -15,7 +15,7 @@ public class Indkoebskurv {
 
     private void calcTotalPrice() {
         totalPrice = 0;
-        for (Produkt tmp : productMap.values()) {
+        for (Cupcake : Order.values()) {
             totalPrice += tmp.getTotalPrice();
         }
     }
@@ -24,7 +24,7 @@ public class Indkoebskurv {
         return productMap.size();
     }
 
-    public void addToProductMap(Produkt cupcake) {
+    public void addToProductMap(Product cupcake) {
         productMap.put(id.incrementAndGet(),cupcake);
         calcTotalPrice();
     }
@@ -35,7 +35,7 @@ public class Indkoebskurv {
     }
 
 
-    public HashMap<Integer, Produkt> getProductMap() {
+    public HashMap<Integer, Product> getProductMap() {
         return productMap;
     }
 

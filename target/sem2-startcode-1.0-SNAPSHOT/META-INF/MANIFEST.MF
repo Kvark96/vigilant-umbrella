@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-<<<<<<< HEAD
 Built-By: sebas
 Build-Jdk: version 1.8.0_292
-=======
-Built-By: EG
-Build-Jdk: version 15.0.1
->>>>>>> 9ecfbaacc837ff48212704b107af86378f1909ec
 

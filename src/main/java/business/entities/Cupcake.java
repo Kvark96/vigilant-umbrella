@@ -1,30 +1,35 @@
 package business.entities;
 
-public class Cupcake extends Produkt{
-    private Topping topping;
-    private Bottom bottom;
+public class Cupcake {
+    private int topping_id;
+    private int bottom_id;
+    private int quantity;
 
-    public Cupcake(String name, int quantity, Double totalPrice, Bottom bottom, Topping topping) {
-        super(name, quantity, totalPrice);
-        this.bottom = bottom;
-        this.topping = topping;
+
+    public Cupcake(int  quantity, int bottom_id, int topping_id) {
+        this.topping_id = topping_id;
+        this.bottom_id = bottom_id;
+        this.quantity = quantity;
     }
 
     @Override
     public String toString() {
         return "Cupcake{" +
-                "topping=" + topping +
-                ", bottom=" + bottom +
+                "topping_id=" + topping_id +
+                ", bottom_id=" + bottom_id +
+                ", quantity=" + quantity +
                 '}';
     }
 
-    public Topping getTopping() {
-        return topping;
+    public int getTopping_id() {
+        return topping_id;
     }
 
-    public Bottom getBottom() {
-        return bottom;
+    public int getBottom_id() {
+        return bottom_id;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
 }
-
