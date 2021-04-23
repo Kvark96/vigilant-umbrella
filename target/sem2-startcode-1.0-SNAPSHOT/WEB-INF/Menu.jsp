@@ -20,14 +20,14 @@
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
                 <c:forEach var="bottom" items="${applicationScope.bottomList}">
-                    <option value="${Bottom.name}">${bottom.name}</option>
+                    <option value="${Bottom.id}">${bottom.name}</option>
                 </c:forEach>
             </select>
 
             <label for="Toppings">Topping</label>
             <select name="Toppings" id="Toppings">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
-                    <option value="${Toppings.name}">${Toppings.name}</option>
+                    <option value="${Toppings.id}">${Toppings.name}</option>
                 </c:forEach>
             </select>
 
