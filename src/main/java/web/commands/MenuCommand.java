@@ -23,6 +23,13 @@ public class MenuCommand extends CommandProtectedPage {
         String Toppings_name = "";
         int count = 0;
 
+/*
+        String Bottom_name = "";
+        String Toppings_name = "";
+        int count = 0;
+
+ */
+
         Bottom_name = request.getParameter("bottoms");
         Toppings_name = request.getParameter("Toppings");
         count = Integer.parseInt(request.getParameter("Count"));

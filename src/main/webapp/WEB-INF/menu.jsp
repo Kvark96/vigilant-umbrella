@@ -15,7 +15,7 @@
         <h1> Velkommen ombord</h1>
 
         <form method="post ls
-" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
+" action="${pageContext.request.contextPath}/fc/ChosenCupcake">
 
 
             <label for="Bottom">BOTTOMS</label>

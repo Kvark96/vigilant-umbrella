@@ -23,7 +23,24 @@ public class KurvCommand extends CommandUnprotectedPage {
 
         Indkøbskurv indkøbskurv = new Indkøbskurv();
 
+        String Bottom_name = "";
+        String Toppings_name = "";
+        int count = 0;
 
+
+
+        request.setAttribute("Bottom", Bottom_name);
+        request.setAttribute("Topping", Toppings_name);
+        request.setAttribute("Count", count);
+
+
+
+
+
+
+
+
+/*
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");
         int toppingId = Integer.parseInt(request.getParameter("toppingid"));
@@ -42,6 +59,9 @@ public class KurvCommand extends CommandUnprotectedPage {
         indkøbskurv.addToProductMap(cupcake);
 
         session.setAttribute("tomordrepage", indkøbskurv);
+
+
+ */
 
         return pageToShow;
 
