@@ -2,7 +2,7 @@ package web.commands;
 
 import business.entities.Bottom;
 import business.entities.Cupcake;
-import business.entities.Indkøbskurv;
+import business.entities.Indkoebskurv;
 import business.entities.Topping;
 import business.exceptions.UserException;
 
@@ -21,9 +21,30 @@ public class KurvCommand extends CommandProtectedPage{
         HttpSession session = request.getSession();
         Cupcake cupcake;
 
+
         Indkøbskurv indkøbskurv = new Indkøbskurv();
+
+        String Bottom_name = "";
+        String Toppings_name = "";
+        int count = 0;
+
+        Indkoebskurv indkoebskurv = new Indkoebskurv();
         // FLoat skal ændret til Dobule
 
+
+
+        request.setAttribute("Bottom", Bottom_name);
+        request.setAttribute("Topping", Toppings_name);
+        request.setAttribute("Count", count);
+
+
+
+
+
+
+
+
+/*
         HashMap<Integer,Topping> toppingMap = (HashMap<Integer, Topping>) request.getServletContext().getAttribute("toppingMap");
         HashMap<Integer,Bottom> bottomMap = (HashMap<Integer, Bottom>) request.getServletContext().getAttribute("bottomMap");
         int toppingId = Integer.parseInt(request.getParameter("toppingid"));
@@ -34,14 +55,17 @@ public class KurvCommand extends CommandProtectedPage{
         Double totalPrice = (topping.getPrice() + bottom.getPrice()) * quantity;
 
         if (session.getAttribute("tomordrepage") != null){
-            indkøbskurv = (Indkøbskurv) session.getAttribute("tomordrepage") ;
+            indkoebskurv = (Indkoebskurv) session.getAttribute("tomordrepage") ;
         }
 
         cupcake = new Cupcake("Cupcake: "+topping.getName() + "/" + bottom.getName(), quantity, totalPrice,bottom,topping);
 
-        indkøbskurv.addToProductMap(cupcake);
+        indkoebskurv.addToProductMap(cupcake);
 
-        session.setAttribute("tomordrepage", indkøbskurv);
+        session.setAttribute("tomordrepage", indkoebskurv);
+
+
+ */
 
         return pageToShow;
     }

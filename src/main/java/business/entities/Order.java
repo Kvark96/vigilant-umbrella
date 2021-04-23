@@ -3,6 +3,7 @@ package business.entities;
 public class Order {
     private int orderId;
     private String usermail;
+    private int price = 0;
 
     public Order(int _orderId, String _usermail){
         orderId = _orderId;
@@ -16,4 +17,6 @@ public class Order {
     public String getUsermail() {
         return usermail;
     }
+
+    public int getPrice(){return price;}
 }
