@@ -18,35 +18,8 @@ public class KurvCommand extends CommandProtectedPage {
     }
 
     @Override
-
-
-
-
-    public String execute(HttpServletRequest request, HttpServletResponse response){
-        HttpSession session = request.getSession();
-        Cupcake cupcake;
-
-
-        Indkoebskurv indkøbskurv = new Indkoebskurv();
-
-        String Bottom_name = "";
-        String Toppings_name = "";
-        int count = 0;
-
-        Indkoebskurv indkoebskurv = new Indkoebskurv();
-        // FLoat skal ændret til Dobule
-
-
-
-        request.setAttribute("Bottom", Bottom_name);
-        request.setAttribute("Topping", Toppings_name);
-        request.setAttribute("Count", count);
-
-
-
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         //HttpSession session = request.getSession();
-
 
         int bottom_id = Integer.parseInt(request.getParameter("Bottom"));
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
@@ -61,8 +34,8 @@ public class KurvCommand extends CommandProtectedPage {
 
         request.getSession().setAttribute("total_price", orderline.getCalcPrice());
         request.getSession().setAttribute("orderline", orderline);
-
 /*
+
         Indkoebskurv indkoebskurv = new Indkoebskurv();
 
 
