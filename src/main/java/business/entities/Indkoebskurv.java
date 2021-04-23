@@ -13,12 +13,13 @@ public class Indkoebskurv {
         this.productMap = new HashMap<>();
     }
 
+    /*
     private void calcTotalPrice() {
         totalPrice = 0;
-        for (Cupcake : Order.values()) {
+        for (Cupcake : Order) {
             totalPrice += tmp.getTotalPrice();
         }
-    }
+    }*/
 
     public int getNumberOfItems(){
         return productMap.size();
@@ -26,12 +27,12 @@ public class Indkoebskurv {
 
     public void addToProductMap(Product cupcake) {
         productMap.put(id.incrementAndGet(),cupcake);
-        calcTotalPrice();
+        //calcTotalPrice();
     }
 
     public void removeFromProductMap(int id){
         productMap.remove(id);
-        calcTotalPrice();
+        //calcTotalPrice();
     }
 
 
@@ -43,4 +44,3 @@ public class Indkoebskurv {
         return totalPrice;
     }
 }
-

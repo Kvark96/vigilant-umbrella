@@ -1,22 +1,14 @@
 package business.entities;
 
 public interface  Product {
-    private String name;
-    private int quantity;
-    private Double totalPrice;
+    String name = "";
+    int quantity = 0;
+    Double totalPrice = 0.0;
 
-    public Product(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
+    //public Product(String name, int quantity);
 
-    }
+    // public String getName();
 
-    public String getName() {
-        return name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
+    // public int getQuantity();
 
 }

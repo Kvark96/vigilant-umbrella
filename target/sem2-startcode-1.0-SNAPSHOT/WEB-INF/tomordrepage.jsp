@@ -19,20 +19,22 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">Product Name</th>
+                <th scope="col">Topping</th>
+                <th scope="col">Bottom</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
                 <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="item" items="${sessionScope.tomordrepage.productMap}">
+            <c:forEach var="item" items="${orderline.orderline}">
                 <tr>
-                    <td>${item.value.name}</td>
-                    <td>${item.value.quantity}</td>
-                    <td>${item.value.totalPrice}</td>
+                    <td>${item.topping.name}</td>
+                    <td>${item.bottom.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>${item.calcPrice}</td>
                     <td>
-                        <button type="submit" class="btn btn-primary" name="delete" value="${item.key}">
+                        <button type="submit" class="btn btn-primary" name="delete" value="${item}">
                             Remove
                         </button>
                     </td>
@@ -42,7 +44,7 @@
         </table>
         <div class="row">
         <div class="col-sm-4">
-            <h2>${sessionScope.tomordrepage.totalPrice}</h2>
+            <h2>${orderline.calcPrice}</h2>
         </div>
 
 
@@ -64,5 +66,3 @@
 
     </jsp:body>
 </t:genericpage>
-
-

@@ -14,14 +14,12 @@
 
         <h1> Velkommen ombord</h1>
 
-        <form method="post ls
-" action="${pageContext.request.contextPath}/fc/tomordrepage">
-
+        <form method="post" action="${pageContext.request.contextPath}/fc/tomordrepage">
 
             <label for="Bottom">BOTTOMS</label>
             <select name="Bottom" id="Bottom">
                 <c:forEach var="Bottom" items="${applicationScope.bottomList}">
-                    <option value="${Bottom}">${Bottom.name}</option>
+                    <option value="${Bottom.product_id}">${Bottom.name}</option>
                 </c:forEach>
             </select>
 
@@ -29,7 +27,7 @@
             <label for="Toppings">Topping</label>
             <select name="Toppings" id="Toppings">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
-                    <option value="${Toppings}">${Toppings.name}</option>
+                    <option value="${Toppings.product_id}">${Toppings.name}</option>
                 </c:forEach>
             </select>
 
@@ -86,4 +84,3 @@
 
     </jsp:body>
 </t:genericpage>
-
