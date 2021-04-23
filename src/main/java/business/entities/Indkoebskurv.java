@@ -3,39 +3,40 @@ package business.entities;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Indkøbskurv {
-    HashMap<Integer,Produkt> productMap;
+public class Indkoebskurv {
+    HashMap<Integer, Product> productMap;
     float totalPrice;
     AtomicInteger id;
 
-    public Indkøbskurv() {
+    public Indkoebskurv() {
         this.id = new AtomicInteger();
         this.productMap = new HashMap<>();
     }
 
+    /*
     private void calcTotalPrice() {
         totalPrice = 0;
-        for (Produkt tmp : productMap.values()) {
+        for (Cupcake : Order) {
             totalPrice += tmp.getTotalPrice();
         }
-    }
+    }*/
 
     public int getNumberOfItems(){
         return productMap.size();
     }
 
-    public void addToProductMap(Produkt cupcake) {
+    public void addToProductMap(Product cupcake) {
         productMap.put(id.incrementAndGet(),cupcake);
-        calcTotalPrice();
+        //calcTotalPrice();
     }
 
     public void removeFromProductMap(int id){
         productMap.remove(id);
-        calcTotalPrice();
+        //calcTotalPrice();
     }
 
 
-    public HashMap<Integer, Produkt> getProductMap() {
+    public HashMap<Integer, Product> getProductMap() {
         return productMap;
     }
 
@@ -43,4 +44,3 @@ public class Indkøbskurv {
         return totalPrice;
     }
 }
-
