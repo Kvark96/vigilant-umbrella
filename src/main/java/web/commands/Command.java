@@ -32,13 +32,8 @@ public abstract class Command
         commands.put("kundeliste", new KundelisteCommand("kundeliste", "employee"));
         commands.put("ordreliste", new OrdreListeCommand("ordreliste", "employee"));
 
-        commands.put("tomordrepage", new tomordrepage("tomordrepage","customer"));
+        commands.put("tomordrepage", new KurvCommand("tomordrepage","customer"));
         commands.put("menu", new CommandProtectedPage("menu","customer"));
-
-
-
-
-
 
     }
 

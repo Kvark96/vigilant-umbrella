@@ -14,44 +14,20 @@
 
         <h1> Velkommen ombord</h1>
 
-<<<<<<< HEAD
-        <form method="post" action="${pageContext.request.contextPath}/fc/KurvCommand.java">
-=======
         <form method="Get" action="${pageContext.request.contextPath}/fc/tomordrepage.jsp">
->>>>>>> 9f924ab77cc4a987d863daed6ea8c826bc48a0e3
 
 
             <label for="bottoms">BOTTOMS</label>
             <select name="bottoms" id="bottoms">
-<<<<<<< HEAD
-
-
-                <c:forEach items="${bottoms}" var="bottom">
-                    <option value="${bottom.name}">${bottom.name}</option>
-                </c:forEach>
-
-
-            </select>
-
-
-            <label for="toppings">TOPPINGS</label>
-            <select name="toppings" id="toppings">
-
-
-                <c:forEach items="${Toppings}" var="toppings">
-                    <option value="${toppings.name}">${toppings.name}</option>
-
-=======
                 <c:forEach var="bottom" items="${applicationScope.bottomList}">
-                    <option value="${Bottom.name}">${bottom.name}</option>
+                    <option value="${Bottom.id}">${bottom.name}</option>
                 </c:forEach>
             </select>
 
             <label for="Toppings">Topping</label>
             <select name="Toppings" id="Toppings">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
-                    <option value="${Toppings.name}">${Toppings.name}</option>
->>>>>>> 9f924ab77cc4a987d863daed6ea8c826bc48a0e3
+                    <option value="${Toppings.id}">${Toppings.name}</option>
                 </c:forEach>
             </select>
 

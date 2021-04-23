@@ -21,8 +21,6 @@ public class FrontController extends HttpServlet
 
 
 
-
-
     private final static String USER = "root";
     private final static String PASSWORD = "Cph73128";
 

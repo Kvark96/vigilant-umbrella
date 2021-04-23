@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 
-public class KurvCommand extends CommandUnprotectedPage {
-    public KurvCommand(String pageToShow) {
-        super(pageToShow);
+public class KurvCommand extends CommandProtectedPage{
+    public KurvCommand(String pageToShow, String role) {
+        super(pageToShow, role);
     }
 
     @Override
-    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
+    public String execute(HttpServletRequest request, HttpServletResponse response){
         HttpSession session = request.getSession();
         Cupcake cupcake;
 
@@ -44,8 +44,6 @@ public class KurvCommand extends CommandUnprotectedPage {
         session.setAttribute("tomordrepage", indkøbskurv);
 
         return pageToShow;
-
-
     }
 
 }
