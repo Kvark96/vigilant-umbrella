@@ -59,7 +59,7 @@
                 <c:set var="link" scope="session" value="/fc/loginpage"/>
             </c:if>
             <div class="col-sm-4">
-                <a class="btn btn-success" href="${pageContext.request.contextPath}${link}" role="button">Go to
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Go to
                     payment</a>
             </div>
         </div>

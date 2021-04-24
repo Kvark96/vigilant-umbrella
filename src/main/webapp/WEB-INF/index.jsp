@@ -5,7 +5,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Home
+          Lyngby Cupcakes
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -17,7 +17,7 @@
 
 
         <div>
-            <h2>Velkommen til Olsker Cupcakes</h2>
+            <h2>Velkommen til Lyngby Cupcakes</h2>
 
             <div style="margin-top: 3em;margin-bottom: 3em;">
 

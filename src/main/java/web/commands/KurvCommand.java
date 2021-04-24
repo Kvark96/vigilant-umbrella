@@ -34,8 +34,8 @@ public class KurvCommand extends CommandProtectedPage {
 
         request.getSession().setAttribute("total_price", orderline.getCalcPrice());
         request.getSession().setAttribute("orderline", orderline);
-
 /*
+
         Indkoebskurv indkoebskurv = new Indkoebskurv();
 
 
