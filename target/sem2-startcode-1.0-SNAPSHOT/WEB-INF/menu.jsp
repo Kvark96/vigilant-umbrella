@@ -16,24 +16,27 @@
 
         <form method="post" action="${pageContext.request.contextPath}/fc/tomordrepage">
 
-            <label for="Bottom">BOTTOMS</label>
-            <select name="Bottom" id="Bottom">
+            <label for="Bottom">Bunde:</label>
+            <select name="Bottom" id="Bottom"  class="form-select">
                 <c:forEach var="Bottom" items="${applicationScope.bottomList}">
                     <option value="${Bottom.product_id}">${Bottom.name}</option>
                 </c:forEach>
             </select>
+<div class="container">
 
 
-            <label for="Toppings">Topping</label>
-            <select name="Toppings" id="Toppings">
+</div>
+
+            <label for="Toppings">Toppe:</label>
+            <select name="Toppings" id="Toppings"  class="form-select">
                 <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
                     <option value="${Toppings.product_id}">${Toppings.name}</option>
                 </c:forEach>
             </select>
 
 
-            <label for="Count">Count</label>
-            <select name="Count" id="Count">
+            <label for="Count">Antal:</label>
+            <select name="Count" id="Count" class="form-select" aria-label="" >
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -57,13 +60,15 @@
             </select>
             <br>
             <br>
-            <input type="submit" class="btn btn-primary" value="Submit"/>
+            <input type="submit" class="btn btn-primary align-items-md-center " value="Vælg" />
         </form>
         <br>
 
         <H1> Bunde</H1>
 
-        <table>
+        <table class="table">
+            <th> Smag</th>
+            <th>Pris</th>
         <c:forEach var="Bottom" items="${applicationScope.bottomList}">
             <tr>
                 <td><c:out value="${Bottom.name}"/></td>
@@ -73,10 +78,14 @@
         </table>
 
         <H2> Toppe</H2>
-        <table>
+        <table class="table">
+
+            <th> Smag</th>
+            <th>Pris</th>
             <c:forEach var="Toppings" items="${applicationScope.toppinglist}">
+
                 <tr>
-                    <td><c:out value="${Toppings.name}"/></td>
+                   <td><c:out value="${Toppings.name}"/></td>
                     <td><c:out value="${Toppings.price}" /></td>
                 </tr>
             </c:forEach>

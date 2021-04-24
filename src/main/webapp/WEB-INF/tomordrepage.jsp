@@ -32,9 +32,14 @@
                     <td>${item.topping.name}</td>
                     <td>${item.bottom.name}</td>
                     <td>${item.quantity}</td>
+
+
                     <td>${item.calcPrice}</td>
+
                     <td>
                         <button type="submit" class="btn btn-primary" name="delete" value="${item}">
+
+
                             Remove
                         </button>
                     </td>
@@ -44,8 +49,15 @@
         </table>
         <div class="row">
         <div class="col-sm-4">
+
+
+
+
+
             <h2>${orderline.calcPrice}</h2>
+
         </div>
+
 
 
 
@@ -53,12 +65,14 @@
 
             </div>
             <c:if test="${sessionScope.role == 'customer' }">
-                <c:set var="link" scope="session" value="/fc/gotopayment"/>
+                <c:set var="link" scope="session" value="/fc/paymentpage"/>
             </c:if>
             <c:if test="${empty sessionScope.role}">
                 <c:set var="link" scope="session" value="/fc/loginpage"/>
             </c:if>
             <div class="col-sm-4">
+
+
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Go to
                     payment</a>
             </div>

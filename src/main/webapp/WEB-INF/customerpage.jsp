@@ -4,22 +4,21 @@
 
 <t:genericpage>
     <jsp:attribute name="header">
-         Demo Page for Customer Roles
+         Kundeside
     </jsp:attribute>
     <jsp:attribute name="footer">
     </jsp:attribute>
 
     <jsp:body>
-        <h1>Hello ${sessionScope.email} </h1>
-        You are now logged in as a Customer of our wonderful site.
-        Role: ${sessionScope.role}
+        <h1>Velkommen ${sessionScope.email} </h1>
 
 
 
+        <p1>Oversigt</p1>
 
-        <p ><a href = "${pageContext.request.contextPath}/fc/tomordrepage" > Se liste af ordrer</a ></p >
+        <p ><a href = "${pageContext.request.contextPath}/fc/tomordrepage"  class="btn btn-primary"> Se liste af ordrer</a ></p >
 
-     <a href="${pageContext.request.contextPath}/fc/menu"> Klik her </a>
+     <a href="${pageContext.request.contextPath}/fc/menu" class="btn btn-primary" > Klik her for at vælge dine cupcakes </a>
 
 
     </jsp:body>

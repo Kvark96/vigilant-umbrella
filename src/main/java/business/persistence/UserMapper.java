@@ -48,7 +48,7 @@ public class UserMapper
     {
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT id, role FROM users WHERE email=? AND password=?";
+            String sql = "SELECT id, role, balance FROM users WHERE email=? AND password=?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
@@ -97,5 +97,23 @@ public class UserMapper
             System.out.println("Connection to database could not be established.");
         }
         return lst;
+    }
+
+    public User withdraw_from_balance () {
+
+try(Connection connection = database.connect()){
+ String SQL= "SELECT balance FROM users WHERE id 'customer'";
+
+        try(PreparedStatement ps = connection.prepareStatement(SQL)){
+            ResultSet rs = ps.executeQuery();
+
+        }
+ catch (SQLException s){
+                System.out.println("PS Fail");
+            }
+        } catch (SQLException e) {
+            System.out.println("Connection to database could not be established.");
+        }
+return withdraw_from_balance();
     }
 }
