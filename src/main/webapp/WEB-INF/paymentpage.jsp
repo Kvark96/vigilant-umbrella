@@ -12,7 +12,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Payment Page
+      Kredit betalingsside
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -22,13 +22,18 @@
     <jsp:body>
 
         <div>
-            <h2>Pay for your order</h2>
+            <h2>Betal for din ordre</h2>
         </div>
+
+
+
 
         <div class="row">
             <div class="col-sm-4">
-                <h2>Total price for the order: ${orderline.calcPrice}</h2>
+                <h2>Den fulde pris for dine cupcakes er: ${orderline.calcPrice}</h2>
+
             </div>
+
         </div>
         <div class="row">
             <div class="col-sm-4">

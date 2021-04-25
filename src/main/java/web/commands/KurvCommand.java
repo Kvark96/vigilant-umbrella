@@ -19,7 +19,7 @@ public class KurvCommand extends CommandProtectedPage {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        //HttpSession session = request.getSession();
+
 
         int bottom_id = Integer.parseInt(request.getParameter("Bottom"));
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
@@ -34,17 +34,7 @@ public class KurvCommand extends CommandProtectedPage {
 
         request.getSession().setAttribute("total_price", orderline.getCalcPrice());
         request.getSession().setAttribute("orderline", orderline);
-/*
 
-        Indkoebskurv indkoebskurv = new Indkoebskurv();
-
-
-        if (session.getAttribute("tomordrepage") != null) {
-            indkoebskurv = (Indkoebskurv) session.getAttribute("tomordrepage");
-        }
-
-        session.setAttribute("tomordrepage", indkoebskurv);
-*/
 
         return pageToShow;
     }

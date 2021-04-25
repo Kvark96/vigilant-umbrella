@@ -4,7 +4,7 @@
 
 <t:genericpage>
     <jsp:attribute name="header">
-         Register as new User
+         Tilmeld ny bruger
     </jsp:attribute>
     <jsp:attribute name="footer">
     </jsp:attribute>

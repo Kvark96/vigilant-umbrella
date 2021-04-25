@@ -19,10 +19,10 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">Topping</th>
-                <th scope="col">Bottom</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
+                <th scope="col">Top</th>
+                <th scope="col">Bund</th>
+                <th scope="col">Antal</th>
+                <th scope="col">Pris</th>
                 <th scope="col"></th>
             </tr>
             </thead>
@@ -34,8 +34,10 @@
                     <td>${item.quantity}</td>
                     <td>${item.calcPrice}</td>
                     <td>
+
                         <button type="submit" class="btn btn-danger" name="delete" value="${item}">
-                            Remove
+                            Fjern
+
                         </button>
                     </td>
                 </tr>
@@ -44,8 +46,15 @@
         </table>
         <div class="row">
         <div class="col-sm-4">
-            <h2>${orderline.calcPrice}</h2>
+
+
+
+
+
+            <h2> De valgte cupcake koster ${orderline.calcPrice} DKK</h2>
+
         </div>
+
 
 
 
@@ -53,7 +62,7 @@
 
             </div>
             <c:if test="${sessionScope.role == 'customer' }">
-                <c:set var="link" scope="session" value="/fc/gotopayment"/>
+                <c:set var="link" scope="session" value="/fc/paymentpage"/>
             </c:if>
             <c:if test="${sessionScope.role == 'customer' }">
                 <c:set var="link2" scope="session" value="/fc/menu"/>
@@ -62,8 +71,9 @@
                 <c:set var="link" scope="session" value="/fc/loginpage"/>
             </c:if>
             <div class="col-sm-4">
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Go to
-                    payment</a>
+
+
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Gå til betaling</a>
             </div>
             <div class="col-sm-4">
                 <a class="btn btn-info" href="${pageContext.request.contextPath}${link2}" role="button">Go back</a>

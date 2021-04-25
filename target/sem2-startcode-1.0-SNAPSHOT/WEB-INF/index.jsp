@@ -5,7 +5,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Home
+          Lyngby Cupcakes
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -17,29 +17,27 @@
 
 
         <div>
-            <h2>Velkommen til Olsker Cupcakes</h2>
+            <h2 class="text-center">Velkommen til Lyngby Cupcakes</h2>
 
-            <div style="margin-top: 3em;margin-bottom: 3em;">
-
-
+            <div class="margin-top: 3em;margin-bottom: 3em;">
 
 
 
-            </div>
-            <img src="${pageContext.request.contextPath}/IMG/Frontcakes.png"  class="img-fluid m-4"   alt="FrontPic
+
+
+
+            <img src="${pageContext.request.contextPath}/IMG/Frontcakes.png"  class="img-fluid mx-auto d-block"   alt="FrontPic">
+                   </div>
 
 
 
             <c:if test="${sessionScope.role == 'employee' }">
-                <p style="font-size: larger">This is what you can do,
-                    since your are logged in as an employee</p>
+                <p style="font-size: larger"></p>
                  <p><a href="fc/employeepage">Employee Page</a>
              </c:if>
 
              <c:if test="${sessionScope.role == 'customer' }">
-                <p style="font-size: larger">This is what you can do, since your
-                    are logged in as a customer</p>
-                <p><a href="fc/customerpage">Customer Page</a>
+                <p style="font-size: larger"></p>
             </c:if>
 
         </div>
