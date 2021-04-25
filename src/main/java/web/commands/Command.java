@@ -40,12 +40,6 @@ public abstract class Command
 
 
 
-        commands.put("menu", new CommandProtectedPage("menu","customer"));
-
-
-
-
-
 
 
 

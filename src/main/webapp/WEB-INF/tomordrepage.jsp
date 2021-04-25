@@ -34,7 +34,7 @@
                     <td>${item.quantity}</td>
                     <td>${item.calcPrice}</td>
                     <td>
-                        <button type="submit" class="btn btn-primary" name="delete" value="${item}">
+                        <button type="submit" class="btn btn-danger" name="delete" value="${item}">
                             Remove
                         </button>
                     </td>
@@ -55,12 +55,18 @@
             <c:if test="${sessionScope.role == 'customer' }">
                 <c:set var="link" scope="session" value="/fc/gotopayment"/>
             </c:if>
+            <c:if test="${sessionScope.role == 'customer' }">
+                <c:set var="link2" scope="session" value="/fc/menu"/>
+            </c:if>
             <c:if test="${empty sessionScope.role}">
                 <c:set var="link" scope="session" value="/fc/loginpage"/>
             </c:if>
             <div class="col-sm-4">
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Go to
                     payment</a>
+            </div>
+            <div class="col-sm-4">
+                <a class="btn btn-info" href="${pageContext.request.contextPath}${link2}" role="button">Go back</a>
             </div>
         </div>
 

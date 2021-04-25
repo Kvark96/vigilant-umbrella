@@ -27,7 +27,7 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <h2>Total price for the order: ${sessionScope.indkøbskurv.totalPrice}</h2>
+                <h2>Total price for the order: ${orderline.calcPrice}</h2>
             </div>
         </div>
         <div class="row">
