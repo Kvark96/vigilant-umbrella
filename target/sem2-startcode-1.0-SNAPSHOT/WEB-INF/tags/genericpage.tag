@@ -44,11 +44,18 @@
     </div>
     <nav class="my-2 my-md-0 me-md-3">
         <c:if test="${addHomeLink == null }">
-            <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Hjem</a>
+            <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Forside</a>
         </c:if>
 
-        <a class="p-2 text-dark" href="#">Profil</a>
-        <a class="p-2 text-dark" href="#">About</a>
+
+        <c:if test="${addHomeLink == null }">
+            <a class="p-2 text-dark" href="${pageContext.request.contextPath}/fc/customerpage">Oversigt</a>
+        </c:if>
+
+
+
+
+
     </nav>
 
     <div>
@@ -64,18 +71,17 @@
         <c:if test="${isNotLoginPage && isNotRegisterPage}">
             <c:if test="${sessionScope.user != null }">
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
-                href="${pageContext.request.contextPath}/fc/logoutcommand">Logout</a>
+                href="${pageContext.request.contextPath}/fc/logoutcommand">Log ud</a>
             </c:if>
             <c:if test="${sessionScope.user == null }">
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
-                   href="${pageContext.request.contextPath}/fc/loginpage">Login</a>
+                   href="${pageContext.request.contextPath}/fc/loginpage">Log ind</a>
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
-                   href="${pageContext.request.contextPath}/fc/registerpage">Sign up</a>
+                   href="${pageContext.request.contextPath}/fc/registerpage">Tilmeld</a>
             </c:if>
-        <c:if test="${sessionScope.user == null }">
-            <a type="button" class="btn btn-sm  btn-outline-secondary"
-               href="${pageContext.request.contextPath}/fc/ordrepage">Ordre</a>
-        </c:if>
+
+
+
     </div>
     </c:if>
 </header>

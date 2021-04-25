@@ -34,6 +34,8 @@ public abstract class Command
         commands.put("tomordrepage", new KurvCommand("tomordrepage","customer"));
         commands.put("menu", new CommandProtectedPage("menu","customer"));
         commands.put("paymentpage", new PaymentCommand("paymentpage","customer"));
+        commands.put("frontorderpage", new CommandProtectedPage("tomordrepage", "customer"));
+
 
 
 
