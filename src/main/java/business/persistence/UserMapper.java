@@ -82,12 +82,14 @@ public class UserMapper {
         return lst;
     }
 
-    public double withdraw_from_balance(Double totalprice) {
+    public double withdraw_from_balance(Double totalprice, int id) {
 
         try (Connection connection = database.connect()) {
-            String SQL = "INSERT INTO cupcake.users(balance) VALUES (?)";
+            String SQL = "INSERT INTO cupcake.users (id,balance) VALUES (?,?);";
 
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
+                ps.setInt(1,id);
+                ps.setDouble(1,- totalprice);
                 ResultSet rs = ps.executeQuery();
 
             } catch (SQLException s) {
@@ -98,19 +100,19 @@ public class UserMapper {
 
 
         }
-        return withdraw_from_balance(totalprice);
+        return withdraw_from_balance(totalprice, id);
     }
 
-    public double getBalance() {
+    public double getBalance(int id) {
+
         Double balance = 0.00;
-
         try (Connection connection = database.connect()) {
-            String SQL = "SELECT balance FROM cupcake.users";
-
+            String SQL = "SELECT balance FROM cupcake.users where id = VALUES (?)";
 
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
-                ps.setDouble(1,balance);
+                ps.setInt(1,id);
                 ResultSet rs = ps.executeQuery();
+                balance = rs.getDouble(1);
 
             } catch (SQLException s) {
                 System.out.println("PS Fail");

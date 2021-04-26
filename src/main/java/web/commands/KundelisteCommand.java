@@ -17,6 +17,8 @@ public class KundelisteCommand extends CommandProtectedPage{
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp){
 
+
+
         UserMapper um = new UserMapper(FrontController.database);
         List<User> customers = um.getUsers();
         req.setAttribute("customers", customers);

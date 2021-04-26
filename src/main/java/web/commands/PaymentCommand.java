@@ -1,5 +1,6 @@
 package web.commands;
 
+import business.entities.User;
 import business.exceptions.UserException;
 import business.persistence.UserMapper;
 import web.FrontController;
@@ -14,6 +15,22 @@ public class PaymentCommand extends CommandProtectedPage{
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
+        UserMapper UM = new UserMapper(FrontController.database);
+        Double total_price = Double.parseDouble("total_price");
+        int id = Integer.parseInt("id");
+        Double currentBalance= UM.getBalance(id);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -24,6 +24,12 @@ public class KurvCommand extends CommandProtectedPage {
         int bottom_id = Integer.parseInt(request.getParameter("Bottom"));
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
         int count = Integer.parseInt(request.getParameter("Count"));
+        String email = "";
+        String passeword= "";
+        String role = "";
+        User user =new User(email,passeword,role);
+
+         int id = user.getId();
 
 
 
@@ -32,6 +38,7 @@ public class KurvCommand extends CommandProtectedPage {
 
         orderline.addCupcake(cupcake);
 
+        request.getSession().setAttribute("id",id);
         request.getSession().setAttribute("total_price", orderline.getCalcPrice());
         request.getSession().setAttribute("orderline", orderline);
 
