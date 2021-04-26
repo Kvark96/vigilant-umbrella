@@ -30,11 +30,8 @@
 
         <div class="row">
             <div class="col-sm-4">
-<<<<<<< HEAD
-                <h2>Total price for the order: ${orderline.calcPrice}</h2>
-=======
-                <h2>Den fulde pris for dine cupcakes er:  </h2>
->>>>>>> fe00160de8e2e90d7bef45b053edd7c384765af1
+                <h2>Den fulde pris for dine cupcakes er: ${orderline.calcPrice}</h2>
+
             </div>
 
         </div>

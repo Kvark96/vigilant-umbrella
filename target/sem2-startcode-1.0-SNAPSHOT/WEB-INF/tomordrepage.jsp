@@ -32,20 +32,12 @@
                     <td>${item.topping.name}</td>
                     <td>${item.bottom.name}</td>
                     <td>${item.quantity}</td>
-
-
                     <td>${item.calcPrice}</td>
-
                     <td>
-<<<<<<< HEAD
+
                         <button type="submit" class="btn btn-danger" name="delete" value="${item}">
-                            Remove
-=======
-                        <button type="submit" class="btn btn-primary" name="delete" value="${item}">
-
-
                             Fjern
->>>>>>> fe00160de8e2e90d7bef45b053edd7c384765af1
+
                         </button>
                     </td>
                 </tr>
