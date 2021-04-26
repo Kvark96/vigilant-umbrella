@@ -1,5 +1,6 @@
 package business.persistence;
 
+import business.entities.Orderline;
 import business.exceptions.UserException;
 import business.entities.User;
 
@@ -99,10 +100,10 @@ public class UserMapper
         return lst;
     }
 
-    public User withdraw_from_balance () {
+    public int  withdraw_from_balance (Orderline orderline) {
 
 try(Connection connection = database.connect()){
- String SQL= "SELECT balance FROM users WHERE id 'customer'";
+ String SQL= "INSERT INTO cupcake.usersFROM(balance) VALUES (?)";
 
         try(PreparedStatement ps = connection.prepareStatement(SQL)){
             ResultSet rs = ps.executeQuery();
@@ -114,6 +115,6 @@ try(Connection connection = database.connect()){
         } catch (SQLException e) {
             System.out.println("Connection to database could not be established.");
         }
-return withdraw_from_balance();
+
     }
 }

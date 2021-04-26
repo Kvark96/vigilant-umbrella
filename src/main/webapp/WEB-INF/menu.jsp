@@ -4,7 +4,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-        Lyngby Cupcakes
+        Vælg dine cupcakes
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -12,29 +12,14 @@
     </jsp:attribute>
     <jsp:body>
         <div class="container">
-
-
             <h1 class="text-center"> Vælg dine cupcakes</h1>
-
-
             <br>
-
-
             <form method="post" action="${pageContext.request.contextPath}/fc/tomordrepage">
-
-
                 <div class="justify-content-center ">
-
-
                     <div class="row">
                         <div class="col-4">
-
-
                             <label for="Bottom">Bunde</label>
-
-
                             <select name="Bottom" id="Bottom" class="form-select">
-
                                 <c:forEach var="Bottom" items="${applicationScope.bottomList}">
                                     <option value="${Bottom.product_id}">${Bottom.name}</option>
                                 </c:forEach>
