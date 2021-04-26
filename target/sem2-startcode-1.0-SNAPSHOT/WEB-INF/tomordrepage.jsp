@@ -62,10 +62,10 @@
 
             </div>
             <c:if test="${sessionScope.role == 'customer' }">
-                <c:set var="link" scope="session" value="/fc/paymentpage"/>
+                <c:set var="pay_link" scope="session" value="/fc/paymentpage"/>
             </c:if>
             <c:if test="${sessionScope.role == 'customer' }">
-                <c:set var="link2" scope="session" value="/fc/menu"/>
+                <c:set var="menu_link" scope="session" value="/fc/menu"/>
             </c:if>
             <c:if test="${empty sessionScope.role}">
                 <c:set var="link" scope="session" value="/fc/loginpage"/>
@@ -73,10 +73,10 @@
             <div class="col-sm-4">
 
 
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}${link}" role="button">Gå til betaling</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/fc/paymentpage" role="button">Gå til betaling</a>
             </div>
             <div class="col-sm-4">
-                <a class="btn btn-info" href="${pageContext.request.contextPath}${link2}" role="button">Go back</a>
+                <a class="btn btn-info" href="${pageContext.request.contextPath}${menu_link}" role="button">Go back</a>
             </div>
         </div>
 

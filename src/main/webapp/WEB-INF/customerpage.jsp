@@ -22,7 +22,7 @@
         </div>
         <div class="d-flex justify-content-center ">
 
-            <p>  <a href="${pageContext.request.contextPath}/fc/menu" class="btn btn-primary"> Vælge cupcakes </a>
+            <p>  <a href="${pageContext.request.contextPath}/fc/menu" class="btn btn-primary"> Vælg cupcakes </a>
             </p>
         </div>
 

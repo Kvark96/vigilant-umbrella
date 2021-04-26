@@ -30,14 +30,16 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <h2>Den fulde pris for dine cupcakes er: ${orderline.calcPrice}</h2>
+                <h2>Din nuværende saldo: ${current_balance}</h2>
+                <h2>Den fulde pris for dine cupcakes er: ${total_price}</h2>
+
 
             </div>
 
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}/fc/tomordepage" role="button">Pay now</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/fc/success" role="button">Pay now</a>
             </div>
         </div>
 

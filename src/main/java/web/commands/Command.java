@@ -35,7 +35,7 @@ public abstract class Command
         commands.put("menu", new CommandProtectedPage("menu","customer"));
         commands.put("paymentpage", new PaymentCommand("paymentpage","customer"));
         commands.put("frontorderpage", new CommandProtectedPage("tomordrepage", "customer"));
-
+        commands.put("success", new CommandProtectedPage("success", "customer"));
 
 
 
