@@ -30,7 +30,8 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <h2>Den fulde pris for dine cupcakes er:  </h2>
+                <h2>Den fulde pris for dine cupcakes er: ${orderline.calcPrice}</h2>
+
             </div>
 
         </div>
