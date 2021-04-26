@@ -99,7 +99,7 @@ public class UserMapper
         }
         return lst;
     }
-
+/*
     public int  withdraw_from_balance (Orderline orderline) {
 
 try(Connection connection = database.connect()){
@@ -116,5 +116,5 @@ try(Connection connection = database.connect()){
             System.out.println("Connection to database could not be established.");
         }
 
-    }
+    }*/
 }

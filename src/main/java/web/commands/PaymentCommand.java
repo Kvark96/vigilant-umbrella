@@ -17,8 +17,6 @@ public class PaymentCommand extends CommandProtectedPage{
 
 
 
-
-
         return pageToShow;
     }
 }

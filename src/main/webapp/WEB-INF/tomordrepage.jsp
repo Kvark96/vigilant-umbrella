@@ -15,7 +15,7 @@
         <div>
             <h2>Se dine ting her!</h2>
         </div>
-        <form action="${pageContext.request.contextPath}/fc/removefromshoppingcart" method="post">
+        <form action="${pageContext.request.contextPath}/fc/tomordrepage" method="post">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -43,6 +43,7 @@
                 </tr>
             </c:forEach>
             </tbody>
+            </form>
         </table>
         <div class="row">
         <div class="col-sm-4">
