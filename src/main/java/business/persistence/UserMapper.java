@@ -87,13 +87,6 @@ public class UserMapper {
         // Get current balance and check whether totalprice can be subtracted
         Double currentBal = getBalance(id);
         if(currentBal == -1.0 || currentBal - totalprice < 0) return -1.0;
-
-
-
-
-
-
-
         Double newBal = -1.0;
 
         // Update balance to new balance
@@ -126,6 +119,7 @@ public class UserMapper {
                 ResultSet rs = ps.executeQuery();
                 balance = rs.getDouble(1);
                 System.out.println("balance = " + balance);
+
 
             } catch (SQLException s) {
                 System.out.println("PS Fail in get balance");

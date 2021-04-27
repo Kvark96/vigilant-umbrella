@@ -20,7 +20,7 @@ public class LoginCommand extends CommandUnprotectedPage {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
+        System.out.println(email+password);
         try {
             User user = userFacade.login(email, password);
 

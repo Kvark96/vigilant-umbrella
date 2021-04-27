@@ -23,6 +23,7 @@ public class PaymentCommand extends CommandProtectedPage{
 
         request.setAttribute("current_balance", UM.getBalance(id));
         request.setAttribute("new_balance", UM.withdraw_from_balance(total_price, id));
+        System.out.println(id);
 
 
         return pageToShow;
