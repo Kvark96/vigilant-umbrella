@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserMapper {
     private Database database;
-
+    int id;
     public UserMapper(Database database) {
         this.database = database;
     }
@@ -26,7 +26,7 @@ public class UserMapper {
                 ps.executeUpdate();
                 ResultSet ids = ps.getGeneratedKeys();
                 ids.next();
-                int id = ids.getInt(1);
+                id = ids.getInt(1);
                 user.setId(id);
             } catch (SQLException ex) {
                 throw new UserException(ex.getMessage());
@@ -115,7 +115,7 @@ public class UserMapper {
 
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
                 ps.setInt(1,id);
-                System.out.println("id = " + id);
+                System.out.println("id =" + id);
                 ResultSet rs = ps.executeQuery();
                 balance = rs.getDouble(1);
                 System.out.println("balance = " + balance);

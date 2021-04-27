@@ -14,6 +14,8 @@
 
     <jsp:body>
 
+        <div class="container">
+
 
 
         <div>
@@ -22,16 +24,42 @@
             <div class="margin-top: 3em;margin-bottom: 3em;">
 
 
-
-
-
-
             <img src="${pageContext.request.contextPath}/IMG/Frontcakes.png"  class="img-fluid mx-auto d-block"   alt="FrontPic">
                    </div>
 
 
+            <H1> Bunde</H1>
 
-            <c:if test="${sessionScope.role == 'employee' }">
+            <table class="table table-responsive">
+                <th> Smag</th>
+                <th>Pris</th>
+                <c:forEach var="Bottom" items="${applicationScope.bottomList}">
+                    <tr>
+                        <td><c:out value="${Bottom.name}"/></td>
+                        <td><c:out value="${Bottom.price}"/></td>
+                    </tr>
+                </c:forEach>
+            </table>
+
+
+            <H1> Toppe</H1>
+
+
+            <table class="table table-responsive">
+                <th> Smag</th>
+                <th>Pris</th>
+                <c:forEach var="Topping" items="${applicationScope.toppinglist}">
+                    <tr>
+                        <td><c:out value="${Topping.name}"/></td>
+                        <td><c:out value="${Topping.price}"/></td>
+                    </tr>
+                </c:forEach>
+            </table>
+
+
+
+
+        <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger"></p>
                  <p><a href="fc/employeepage">Employee Page</a>
              </c:if>
@@ -40,6 +68,7 @@
                 <p style="font-size: larger"></p>
             </c:if>
 
+        </div>
         </div>
 
 
