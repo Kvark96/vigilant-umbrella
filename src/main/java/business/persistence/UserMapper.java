@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserMapper {
     private Database database;
-
+    int id;
     public UserMapper(Database database) {
         this.database = database;
     }
@@ -26,7 +26,7 @@ public class UserMapper {
                 ps.executeUpdate();
                 ResultSet ids = ps.getGeneratedKeys();
                 ids.next();
-                int id = ids.getInt(1);
+                id = ids.getInt(1);
                 user.setId(id);
             } catch (SQLException ex) {
                 throw new UserException(ex.getMessage());
@@ -82,45 +82,50 @@ public class UserMapper {
         return lst;
     }
 
-    public double withdraw_from_balance(Double totalprice, int id) {
+    public double withdraw_from_balance (Double totalprice, int id) {
+        // Get current balance and check whether totalprice can be subtracted
+        Double currentBal = getBalance(id);
+        if(currentBal == -1.0 || currentBal - totalprice < 0) return -1.0;
 
+        Double newBal = -1.0;
+
+        // Update balance to new balance
         try (Connection connection = database.connect()) {
-            String SQL = "INSERT INTO cupcake.users (id,balance) VALUES (?,?);";
-
+            String SQL = "UPDATE cupcake.users SET balance = ? WHERE id = ?";
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
-                ps.setInt(1,id);
-                ps.setDouble(1,- totalprice);
+                ps.setInt(2,id);
+                ps.setDouble(1,currentBal - totalprice);
                 ResultSet rs = ps.executeQuery();
-
+                newBal = rs.getDouble("balance");
             } catch (SQLException s) {
-                System.out.println("PS Fail");
+                System.out.println("PS Fail in withdraw");
             }
         } catch (SQLException e) {
             System.out.println("Connection to database could not be established.");
-
-
         }
-        return withdraw_from_balance(totalprice, id);
+
+        return newBal;
     }
 
     public double getBalance(int id) {
 
-        Double balance = 0.00;
+        Double balance = -1.00;
         try (Connection connection = database.connect()) {
-            String SQL = "SELECT balance FROM cupcake.users where id = VALUES (?)";
+            String SQL = "SELECT balance FROM cupcake.users where id = ?";
 
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
                 ps.setInt(1,id);
+                System.out.println("id =" + id);
                 ResultSet rs = ps.executeQuery();
                 balance = rs.getDouble(1);
+                System.out.println("balance = " + balance);
 
             } catch (SQLException s) {
-                System.out.println("PS Fail");
+                System.out.println("PS Fail in get balance");
+                System.out.println(s.getMessage());
             }
         } catch (SQLException e) {
             System.out.println("Connection to database could not be established.");
-
-
         }
         return balance;
     }

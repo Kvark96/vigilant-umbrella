@@ -25,11 +25,11 @@ public class KurvCommand extends CommandProtectedPage {
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
         int count = Integer.parseInt(request.getParameter("Count"));
         String email = "";
-        String passeword= "";
+        String password= "";
         String role = "";
-        User user =new User(email,passeword,role);
+        User user = new User(email,password,role);
 
-         int id = user.getId();
+        int id = user.getId();
 
 
 
