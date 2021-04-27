@@ -36,7 +36,7 @@
                 <c:forEach var="Bottom" items="${applicationScope.bottomList}">
                     <tr>
                         <td><c:out value="${Bottom.name}"/></td>
-                        <td><c:out value="${Bottom.price}"/></td>
+                        <td class="border-left  "><c:out value="${Bottom.price}"/></td>
                     </tr>
                 </c:forEach>
             </table>
