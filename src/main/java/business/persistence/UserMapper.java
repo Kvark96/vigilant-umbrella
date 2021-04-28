@@ -85,18 +85,19 @@ public class UserMapper {
 
     public double withdraw_from_balance (Double totalprice, int id) {
         // Get current balance and check whether totalprice can be subtracted
-        Double currentBal = getBalance(id);
+        double currentBal = getBalance(id);
         if(currentBal == -1.0 || currentBal - totalprice < 0) return -1.0;
-        Double newBal = -1.0;
+        double newBal = -1.0;
 
         // Update balance to new balance
         try (Connection connection = database.connect()) {
             String SQL = "UPDATE cupcake.users SET balance = ? WHERE id = ?";
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
                 ps.setInt(2,id);
-                ps.setDouble(1,currentBal - totalprice);
-                ResultSet rs = ps.executeQuery();
-                newBal = rs.getDouble("balance");
+                double curTot = currentBal - totalprice;
+                ps.setDouble(1, curTot);
+                ps.execute();
+                newBal = getBalance(id);
             } catch (SQLException s) {
                 System.out.println("PS Fail in withdraw");
             }
@@ -115,10 +116,9 @@ public class UserMapper {
 
             try (PreparedStatement ps = connection.prepareStatement(SQL)) {
                 ps.setInt(1,id);
-                System.out.println("id =" + id);
                 ResultSet rs = ps.executeQuery();
+                rs.next();
                 balance = rs.getDouble(1);
-                System.out.println("balance = " + balance);
 
 
             } catch (SQLException s) {
