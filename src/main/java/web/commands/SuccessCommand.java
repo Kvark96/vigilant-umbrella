@@ -78,6 +78,7 @@ public class SuccessCommand extends CommandProtectedPage{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws SQLException {
 
         addToOrders(request, response);
+        insertOrder(request,response);
 
         Orderline orderline = (Orderline) request.getSession().getAttribute("orderline");
         orderline.empty();
