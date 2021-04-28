@@ -49,7 +49,7 @@ public class SuccessCommand extends CommandProtectedPage{
         public void insertOrder (HttpServletRequest request, HttpServletResponse response) {
 
                 try (Connection connection = database.connect()) {
-                    String sql = "INSERT INTO orderline (top_id, bottom_id, quantity, order_id) VALUES {?,?,?,?)";
+                    String sql = "INSERT INTO orderline (top_id, bottom_id, quantity, order_id) VALUES (?,?,?,?)";
 
                     try (PreparedStatement ps = connection.prepareStatement(sql)) {
                         Orderline orderline = (Orderline) request.getSession().getAttribute("orderline");
