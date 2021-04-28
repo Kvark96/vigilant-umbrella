@@ -41,13 +41,26 @@
                 </c:forEach>
             </table>
 
+            <H1> Bunde</H1>
+
+            <table class="table table-responsive">
+                <th> Smag</th>
+                <th>Pris</th>
+                <c:forEach var="Bottom" items="${applicationScope.bottomList}">
+                    <tr>
+                        <td><c:out value="${Bottom.name}"/></td>
+                        <td><c:out value="${Bottom.price}"/></td>
+                    </tr>
+                </c:forEach>
+            </table>
+
 
             <H1> Toppe</H1>
 
 
             <table class="table table-responsive">
                 <th> Smag</th>
-                <th>Pris</th
+                <th>Pris</th>
                 <c:forEach var="Topping" items="${applicationScope.toppinglist}">
                     <tr>
                         <td><c:out value="${Topping.name}"/></td>
@@ -55,19 +68,7 @@
                     </tr>
                 </c:forEach>
             </table>
-
-
-
-
-        <c:if test="${sessionScope.role == 'employee' }">
-                <p style="font-size: larger"></p>
-                 <p><a href="fc/employeepage">Employee Page</a>
-             </c:if>
-
-             <c:if test="${sessionScope.role == 'customer' }">
-                <p style="font-size: larger"></p>
-            </c:if>
-
+            
         </div>
         </div>
 

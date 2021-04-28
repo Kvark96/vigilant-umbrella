@@ -15,12 +15,12 @@
 
 
 
-        <div class="d-flex justify-content-center ">
+        <div class="justify-content-center ">
 
             <p><a href="${pageContext.request.contextPath}/fc/frontorderpage" class="btn btn-primary"> Se liste af
                 ordrer</a></p>
         </div>
-        <div class="d-flex justify-content-center ">
+        <div class=" justify-content-center ">
 
             <p>  <a href="${pageContext.request.contextPath}/fc/menu" class="btn btn-primary"> Vælg cupcakes </a>
             </p>

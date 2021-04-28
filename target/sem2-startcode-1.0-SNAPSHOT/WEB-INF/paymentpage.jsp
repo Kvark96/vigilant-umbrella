@@ -39,7 +39,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}/fc/success" role="button">Pay now</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/fc/success" role="button">Betal med kredit nu</a>
             </div>
         </div>
 
