@@ -38,31 +38,7 @@ public class OrderMapper {
         return lst;
     }
 
-    public void insertOrder() throws UserException {
 
-        try (Connection connection = database.connect()) {
-            String sql = "INSERT INTO orderline (top_id, bottom_id, quantity, order_id) VALUES {?,?,?,?)";
-
-            try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-
-                orderline.getOrderline().ar
-
-                ps. setInt(1,);
-                ps.setInt(2,);
-                ps.setInt(3),;
-                ps.setInt(4,);
-
-
-                ps.executeUpdate();
-
-
-            } catch (SQLException ex) {
-                throw new UserException(ex.getMessage());
-            }
-        } catch (SQLException ex) {
-            throw new UserException(ex.getMessage());
-        }
-    }
 
 
 
