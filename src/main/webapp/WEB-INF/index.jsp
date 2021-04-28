@@ -47,7 +47,7 @@
 
             <table class="table table-responsive">
                 <th> Smag</th>
-                <th>Pris</th>
+                <th>Pris</th
                 <c:forEach var="Topping" items="${applicationScope.toppinglist}">
                     <tr>
                         <td><c:out value="${Topping.name}"/></td>

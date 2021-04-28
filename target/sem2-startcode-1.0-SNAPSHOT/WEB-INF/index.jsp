@@ -36,7 +36,7 @@
                 <c:forEach var="Bottom" items="${applicationScope.bottomList}">
                     <tr>
                         <td><c:out value="${Bottom.name}"/></td>
-                        <td class="border-left  "><c:out value="${Bottom.price}"/></td>
+                        <td><c:out value="${Bottom.price}"/></td>
                     </tr>
                 </c:forEach>
             </table>
@@ -47,7 +47,7 @@
 
             <table class="table table-responsive">
                 <th> Smag</th>
-                <th>Pris</th>
+                <th>Pris</th
                 <c:forEach var="Topping" items="${applicationScope.toppinglist}">
                     <tr>
                         <td><c:out value="${Topping.name}"/></td>

@@ -52,7 +52,7 @@
 
 
 
-            <h2> De valgte cupcake koster ${orderline.calcPrice} DKK</h2>
+            <h2> De valgte cupcakes koster ${orderline.calcPrice} kr.</h2>
 
         </div>
 
@@ -77,7 +77,7 @@
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}${pay_link}" role="button">Gå til betaling</a>
             </div>
             <div class="col-sm-4">
-                <a class="btn btn-info" href="${pageContext.request.contextPath}${menu_link}" role="button">Go back</a>
+                <a class="btn btn-info" href="${pageContext.request.contextPath}${menu_link}" role="button">Gå tilbage</a>
             </div>
         </div>
 
