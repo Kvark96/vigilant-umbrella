@@ -109,7 +109,7 @@ public class UserMapper {
 
     public double getBalance(int id) {
 
-        Double balance = -1.00;
+        double balance = -1.00;
         try (Connection connection = database.connect()) {
             String SQL = "SELECT balance FROM cupcake.users where id = ?";
 
