@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,16 +21,25 @@ public class KurvCommand extends CommandProtectedPage {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        System.out.println("DEN HER DEL AF KODEN BLIVER KØRT");
+        Enumeration<String> atts = request.getSession().getAttributeNames();
+        System.out.println();
 
-        int bottom_id = Integer.parseInt(request.getParameter("Bottom"));
+        while(atts.hasMoreElements()) {
+            System.out.println(atts.nextElement());
+        }
+        System.out.println();
+
+        String botString = request.getParameter("Bottom");
+        System.out.println("Bottom is = " + botString);
+        int bottom_id = Integer.parseInt(botString);
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
         int count = Integer.parseInt(request.getParameter("Count"));
-        String email = "";
-        String password= "";
-        String role = "";
-        User user = new User(email,password,role);
 
-        int id = user.getId();
+
+        int id = (int) request.getSession().getAttribute("user_id");
+
+        System.out.println("user id might be " + id);
 
 
 
@@ -38,7 +48,7 @@ public class KurvCommand extends CommandProtectedPage {
 
         orderline.addCupcake(cupcake);
 
-        request.getSession().setAttribute("id",id);
+        request.getSession().setAttribute("id", id);
         request.getSession().setAttribute("total_price", orderline.getCalcPrice());
         request.getSession().setAttribute("orderline", orderline);
 

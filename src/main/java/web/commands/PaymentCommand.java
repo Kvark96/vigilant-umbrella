@@ -18,7 +18,7 @@ public class PaymentCommand extends CommandProtectedPage{
         UserMapper UM = new UserMapper(FrontController.database);
         
         Double total_price = (Double) request.getSession().getAttribute("total_price");
-        int id = (int) request.getSession().getAttribute("id");
+        int id = (int) request.getSession().getAttribute("user_id");
 
 
         request.setAttribute("current_balance", UM.getBalance(id));
