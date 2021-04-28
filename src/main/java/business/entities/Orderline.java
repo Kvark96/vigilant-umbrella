@@ -24,6 +24,11 @@ public class Orderline {
         return total;
    }
 
+   public void empty(){
+        orderline.clear();
+       calcPrice = _calcPrice();
+   }
+
     public List<Cupcake> getOrderline() {
         return orderline;
     }

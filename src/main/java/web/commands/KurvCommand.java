@@ -21,25 +21,24 @@ public class KurvCommand extends CommandProtectedPage {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-        System.out.println("DEN HER DEL AF KODEN BLIVER KØRT");
+        System.out.println("SESSION ATTRIBUTES = ");
         Enumeration<String> atts = request.getSession().getAttributeNames();
         System.out.println();
 
         while(atts.hasMoreElements()) {
-            System.out.println(atts.nextElement());
+            System.out.println(request.getSession().getAttribute(atts.nextElement()));
         }
         System.out.println();
 
-        String botString = request.getParameter("Bottom");
-        System.out.println("Bottom is = " + botString);
-        int bottom_id = Integer.parseInt(botString);
+
+        int bottom_id = Integer.parseInt(request.getParameter("Bottom"));
         int topping_id = Integer.parseInt(request.getParameter("Toppings"));
         int count = Integer.parseInt(request.getParameter("Count"));
 
 
         int id = (int) request.getSession().getAttribute("user_id");
 
-        System.out.println("user id might be " + id);
+
 
 
 

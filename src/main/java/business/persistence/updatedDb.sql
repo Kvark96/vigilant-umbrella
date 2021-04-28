@@ -14,6 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema cupcake
 -- -----------------------------------------------------
+
 CREATE SCHEMA IF NOT EXISTS `cupcake` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 USE `cupcake` ;
 
@@ -30,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `cupcake`.`users` (
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `user_id_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -60,7 +61,7 @@ ENGINE = InnoDB;
 -- Table `cupcake`.`orders`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cupcake`.`orders` (
-  `order_id` INT NOT NULL,
+  `order_id` INT NOT NULL auto_increment,
   `id` INT NOT NULL,
   `created` TIMESTAMP NULL DEFAULT current_timestamp,
   PRIMARY KEY (`order_id`),
@@ -71,14 +72,16 @@ CREATE TABLE IF NOT EXISTS `cupcake`.`orders` (
     REFERENCES `cupcake`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+;
 
 
 -- -----------------------------------------------------
 -- Table `cupcake`.`orderline`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cupcake`.`orderline` (
-  `orderline_id` INT NOT NULL,
+  `orderline_id` INT NOT NULL AUTO_INCREMENT,
   `top_id` INT NULL,
   `bottom_id` INT NULL,
   `quantity` INT NULL,
@@ -102,7 +105,9 @@ CREATE TABLE IF NOT EXISTS `cupcake`.`orderline` (
     REFERENCES `cupcake`.`orders` (`order_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

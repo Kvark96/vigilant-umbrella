@@ -32,7 +32,7 @@ public abstract class Command {
         commands.put("tomordrepage", new KurvCommand("tomordrepage", "customer"));
         commands.put("menu", new CommandProtectedPage("menu", "customer"));
         commands.put("frontorderpage", new CommandProtectedPage("tomordrepage", "customer"));
-        commands.put("success", new CommandProtectedPage("success", "customer"));
+        commands.put("success", new SuccessCommand("success", "customer"));
         commands.put("paymentpage", new PaymentCommand("paymentpage","customer"));
 
 
