@@ -50,7 +50,7 @@ public class FrontController extends HttpServlet
 
         MenuMapper menuMapper = new MenuMapper(database);
         try {
-            getServletContext().setAttribute("bottomList",menuMapper.getBottomEntities());
+            getServletContext().setAttribute("bottomList",menuMapper.   getBottomEntities());
             getServletContext().setAttribute("toppinglist",menuMapper.getToppingEntities());
         } catch (Exception e ){
             Logger.getLogger("web").log(Level.SEVERE, e.getMessage(), e);;
